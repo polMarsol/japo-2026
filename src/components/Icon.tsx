@@ -36,6 +36,9 @@ import iconKeyboardArrowDown from "@material-symbols/svg-400/outlined/keyboard_a
 import iconViewAgenda from "@material-symbols/svg-400/outlined/view_agenda.svg?raw";
 import iconViewCarousel from "@material-symbols/svg-400/outlined/view_carousel.svg?raw";
 import iconNearMe from "@material-symbols/svg-400/outlined/near_me.svg?raw";
+import iconLock from "@material-symbols/svg-400/outlined/lock.svg?raw";
+import iconBackspace from "@material-symbols/svg-400/outlined/backspace.svg?raw";
+import iconLogout from "@material-symbols/svg-400/outlined/logout.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -73,6 +76,9 @@ const ICONS = {
   view_agenda: iconViewAgenda,
   view_carousel: iconViewCarousel,
   near_me: iconNearMe,
+  lock: iconLock,
+  backspace: iconBackspace,
+  logout: iconLogout,
 } as const;
 
 export type IconName = keyof typeof ICONS;

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useLocalizedDb } from "../lib/db";
 import { useDayProgress } from "../lib/dayState";
 import { useTheme } from "../lib/theme";
+import { useAuth } from "../lib/auth";
 import { getDayHeroPhoto, photoUrl } from "../lib/photos";
 import { Icon, type IconName } from "../components/Icon";
 import { SUPPORTED_LANGUAGES } from "../i18n/resources";
@@ -54,6 +55,7 @@ export function Home() {
   const { t, i18n } = useTranslation();
   const db = useLocalizedDb(i18n.language);
   const { theme, toggle } = useTheme();
+  const { lock } = useAuth();
   const trip = db.index.filter((e) => e.date);
   const totalDays = Object.keys(db.days).length;
   const { count } = useDayProgress();
@@ -141,6 +143,17 @@ export function Home() {
           {theme === "dark" ? t("theme.dark") : t("theme.light")}
         </span>
         <Icon name="chevron_left" className="h-5 w-5 rotate-180 text-muted" />
+      </button>
+
+      <button
+        type="button"
+        onClick={lock}
+        className="flex items-center justify-between rounded-2xl border border-line bg-surface px-4 py-3.5 active:bg-chip"
+      >
+        <span className="flex items-center gap-2 text-sm font-medium text-text">
+          <Icon name="logout" className="h-5 w-5 text-accent" />
+          {t("auth.logout")}
+        </span>
       </button>
     </div>
   );

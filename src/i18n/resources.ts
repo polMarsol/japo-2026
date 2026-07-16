@@ -54,6 +54,11 @@ export const resources = {
       },
       theme: { light: "Mode clar", dark: "Mode fosc" },
       language: { label: "Idioma" },
+      auth: {
+        enterPin: "Introdueix el codi",
+        wrongPin: "Codi incorrecte",
+        logout: "Tancar sessió",
+      },
     },
   },
   en: {
@@ -111,6 +116,11 @@ export const resources = {
       },
       theme: { light: "Light mode", dark: "Dark mode" },
       language: { label: "Language" },
+      auth: {
+        enterPin: "Enter the code",
+        wrongPin: "Wrong code",
+        logout: "Log out",
+      },
     },
   },
   es: {
@@ -168,6 +178,11 @@ export const resources = {
       },
       theme: { light: "Modo claro", dark: "Modo oscuro" },
       language: { label: "Idioma" },
+      auth: {
+        enterPin: "Introduce el código",
+        wrongPin: "Código incorrecto",
+        logout: "Cerrar sesión",
+      },
     },
   },
   ja: {
@@ -225,6 +240,11 @@ export const resources = {
       },
       theme: { light: "ライトモード", dark: "ダークモード" },
       language: { label: "言語" },
+      auth: {
+        enterPin: "コードを入力してください",
+        wrongPin: "コードが違います",
+        logout: "ログアウト",
+      },
     },
   },
 };

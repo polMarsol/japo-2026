@@ -6,15 +6,18 @@ import "./i18n";
 import "./index.css";
 import App from "./App.tsx";
 import { ThemeProvider } from "./lib/theme";
+import { AuthProvider } from "./lib/auth";
 
 registerSW({ immediate: true });
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
-        <App />
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
+          <App />
+        </BrowserRouter>
+      </AuthProvider>
     </ThemeProvider>
   </StrictMode>,
 );
