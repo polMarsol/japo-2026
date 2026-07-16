@@ -64,7 +64,7 @@ export function ChatBot() {
         className="fixed bottom-20 right-4 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-white shadow-lg active:opacity-90"
         aria-label={t("chat.title")}
       >
-        <Icon name="smart_toy" className="h-6 w-6" />
+        <Icon name="festival" className="h-6 w-6" />
       </button>
 
       {open && (
@@ -75,7 +75,7 @@ export function ChatBot() {
           >
             <div className="flex items-center justify-between border-b border-line px-4 py-3">
               <span className="flex items-center gap-2 text-sm font-semibold text-text">
-                <Icon name="smart_toy" className="h-5 w-5 text-accent" />
+                <Icon name="festival" className="h-5 w-5 text-accent" />
                 {t("chat.title")}
               </span>
               <button

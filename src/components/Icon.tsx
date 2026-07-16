@@ -53,6 +53,7 @@ import iconAccountBalanceWallet from "@material-symbols/svg-400/outlined/account
 import iconReceiptLong from "@material-symbols/svg-400/outlined/receipt_long.svg?raw";
 import iconSmartToy from "@material-symbols/svg-400/outlined/smart_toy.svg?raw";
 import iconSend from "@material-symbols/svg-400/outlined/send.svg?raw";
+import iconFestival from "@material-symbols/svg-400/outlined/festival.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -107,6 +108,7 @@ const ICONS = {
   receipt_long: iconReceiptLong,
   smart_toy: iconSmartToy,
   send: iconSend,
+  festival: iconFestival,
 } as const;
 
 export type IconName = keyof typeof ICONS;
