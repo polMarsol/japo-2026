@@ -31,6 +31,8 @@ export const resources = {
         totalTrip: "Total viatge (7 persones)",
         perPerson: "/ persona",
         open: "Obrir",
+        checkIn: "Entrada",
+        checkOut: "Sortida",
         status: {
           paid: "Pagat",
           reserved: "Reservat (resta pagar)",
@@ -144,6 +146,8 @@ export const resources = {
         totalTrip: "Total trip (7 people)",
         perPerson: "/ person",
         open: "Open",
+        checkIn: "Check-in",
+        checkOut: "Check-out",
         status: {
           paid: "Paid",
           reserved: "Booked (payment pending)",
@@ -257,6 +261,8 @@ export const resources = {
         totalTrip: "Total viaje (7 personas)",
         perPerson: "/ persona",
         open: "Abrir",
+        checkIn: "Entrada",
+        checkOut: "Salida",
         status: {
           paid: "Pagado",
           reserved: "Reservado (falta pagar)",
@@ -370,6 +376,8 @@ export const resources = {
         totalTrip: "旅行合計（7名）",
         perPerson: "/ 1人あたり",
         open: "開く",
+        checkIn: "チェックイン",
+        checkOut: "チェックアウト",
         status: {
           paid: "支払い済み",
           reserved: "予約済み（未払い）",

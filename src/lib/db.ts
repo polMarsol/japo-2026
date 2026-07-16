@@ -30,6 +30,7 @@ export interface ResumEntry {
 }
 
 export interface ReservationItem {
+  id: string;
   date: string | null;
   concept: string;
   link: string | null;
@@ -40,6 +41,10 @@ export interface ReservationItem {
   responsible: string | null;
   notes: string | null;
   notesLink: string | null;
+  checkIn: string | null;
+  checkInLink: string | null;
+  checkOut: string | null;
+  checkOutLink: string | null;
 }
 
 export interface Db {

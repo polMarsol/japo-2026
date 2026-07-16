@@ -294,6 +294,36 @@ export function Reserves() {
                   </a>
                 )}
               </div>
+              {(item.checkIn || item.checkOut) && (
+                <div className="flex flex-wrap items-center gap-2 text-xs text-muted">
+                  {item.checkIn && (
+                    <a
+                      href={item.checkInLink ?? undefined}
+                      target={item.checkInLink ? "_blank" : undefined}
+                      rel="noreferrer"
+                      className={`flex items-center gap-1 rounded-full bg-chip px-2 py-0.5 text-chip-text ${
+                        item.checkInLink ? "active:opacity-80" : "pointer-events-none"
+                      }`}
+                    >
+                      <Icon name="flight_takeoff" className="h-3 w-3" />
+                      {t("reservations.checkIn")}: {item.checkIn}
+                    </a>
+                  )}
+                  {item.checkOut && (
+                    <a
+                      href={item.checkOutLink ?? undefined}
+                      target={item.checkOutLink ? "_blank" : undefined}
+                      rel="noreferrer"
+                      className={`flex items-center gap-1 rounded-full bg-chip px-2 py-0.5 text-chip-text ${
+                        item.checkOutLink ? "active:opacity-80" : "pointer-events-none"
+                      }`}
+                    >
+                      <Icon name="sports_score" className="h-3 w-3" />
+                      {t("reservations.checkOut")}: {item.checkOut}
+                    </a>
+                  )}
+                </div>
+              )}
               {notes && (notes.clean || notes.links.length > 0) && (
                 <div className="flex flex-wrap items-center gap-2">
                   {notes.clean && (

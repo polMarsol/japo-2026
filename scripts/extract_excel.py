@@ -15,11 +15,19 @@ from __future__ import annotations
 
 import datetime
 import json
+import re
 import sys
+import unicodedata
 from pathlib import Path
 
 import openpyxl
 from openpyxl.worksheet.worksheet import Worksheet
+
+
+def slugify(text: str) -> str:
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")
+    text = re.sub(r"[^a-zA-Z0-9]+", "-", text).strip("-").lower()
+    return text or "item"
 
 ARROW_MARKERS = (" ↗", "↗")  # " ↗" y "↗" sueltos
 
@@ -28,6 +36,8 @@ def clean_text(value):
     """Normaliza el valor de una celda a texto/fecha/numero serializable."""
     if value is None:
         return None
+    if isinstance(value, datetime.time):
+        return value.strftime("%H:%M")
     if isinstance(value, (datetime.datetime, datetime.date)):
         return value.strftime("%Y-%m-%d")
     if isinstance(value, str):
@@ -166,6 +176,7 @@ def parse_reservations(ws: Worksheet) -> dict:
     items = []
     total = None
     legend = None
+    seen_ids: dict[str, int] = {}
 
     for row in ws.iter_rows(min_row=4, max_row=sheet_max_row(ws)):
         concept = clean_text(row[1].value)
@@ -182,9 +193,22 @@ def parse_reservations(ws: Worksheet) -> dict:
             continue
 
         status = clean_text(row[2].value)
+        date_val = clean_text(row[0].value)
+
+        # Id estable basado solo en el concepto (no en la fecha ni en la
+        # posicion de la fila): la fecha vive a veces en la primera fila de
+        # un bloque de varias filas, asi que un insert desplaza que valor a
+        # otra fila del mismo bloque aunque el concepto no haya cambiado.
+        # El concepto es mucho mas estable ante reordenaciones del Excel.
+        base_id = slugify(concept)
+        count = seen_ids.get(base_id, 0)
+        seen_ids[base_id] = count + 1
+        item_id = base_id if count == 0 else f"{base_id}-{count + 1}"
+
         items.append(
             {
-                "date": clean_text(row[0].value),
+                "id": item_id,
+                "date": date_val,
                 "concept": concept,
                 "link": cell_link(row[1]),
                 "status": status,
@@ -194,6 +218,10 @@ def parse_reservations(ws: Worksheet) -> dict:
                 "responsible": redact_responsible(clean_text(row[5].value)),
                 "notes": clean_text(row[6].value),
                 "notesLink": cell_link(row[6]),
+                "checkIn": clean_text(row[7].value) if len(row) > 7 else None,
+                "checkInLink": cell_link(row[7]) if len(row) > 7 else None,
+                "checkOut": clean_text(row[8].value) if len(row) > 8 else None,
+                "checkOutLink": cell_link(row[8]) if len(row) > 8 else None,
             }
         )
 

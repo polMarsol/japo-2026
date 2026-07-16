@@ -68,8 +68,8 @@ export function useSyncedReservations(baseItems: ReservationItem[]) {
   }, []);
 
   const items: SyncedReservation[] = baseItems
-    .map((item, i) => {
-      const id = String(i);
+    .map((item) => {
+      const id = item.id;
       const patch = overrides[id];
       if (patch?.deleted) return null;
       return {
@@ -97,6 +97,10 @@ export function useSyncedReservations(baseItems: ReservationItem[]) {
         responsible: row.responsible,
         notes: row.notes,
         notesLink: row.notes_link,
+        checkIn: null,
+        checkInLink: null,
+        checkOut: null,
+        checkOutLink: null,
         id: row.id,
         custom: true,
       })),
@@ -131,7 +135,12 @@ export function useSyncedReservations(baseItems: ReservationItem[]) {
     }
   }
 
-  async function addReservation(data: Omit<ReservationItem, "statusKey">) {
+  async function addReservation(
+    data: Omit<
+      ReservationItem,
+      "statusKey" | "id" | "checkIn" | "checkInLink" | "checkOut" | "checkOutLink"
+    >,
+  ) {
     const client = await getSupabaseReady();
     if (!client) return;
     await client.from(CUSTOM_TABLE).insert({

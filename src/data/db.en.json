@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generatedAt": "2026-07-16T11:50:45",
-    "sourceFile": "JAPO_Planning_Pol-1507 (1).xlsx"
+    "generatedAt": "2026-07-16T20:50:41",
+    "sourceFile": "JAPO_Planning_Pol-1507 (2).xlsx"
   },
   "index": [
     {
@@ -352,163 +352,229 @@
   "reservations": {
     "items": [
       {
-        "date": null,
+        "id": "asseguranca",
+        "date": "31/07-22/07",
         "concept": "Insurance",
         "link": null,
         "status": "Paid",
         "statusKey": "paid",
         "costTotal": 790,
         "costPerPerson": 112.8571429,
-        "responsible": "Amaya Pareja de los Santos",
+        "responsible": "Amaya",
         "notes": null,
-        "notesLink": null
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "avio-anada",
+        "date": "2026-07-31",
         "concept": "Outbound flight",
-        "link": null,
+        "link": "https://drive.google.com/drive/folders/1kMgw4Z6FavZfYe-d79nsiQ9WS3cdyD7L?usp=drive_link",
         "status": "Paid",
         "statusKey": "paid",
         "costTotal": 4704,
         "costPerPerson": 672,
-        "responsible": "Amaya Pareja de los Santos",
-        "notes": "Takachiho boats 5,100 yen/boat, 2 weeks in advance",
-        "notesLink": null
+        "responsible": "Amaya",
+        "notes": "Check-in 48h abans (29/07)",
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "furgo-de-l-1-al-4-d-agost",
         "date": null,
         "concept": "Minivan (Aug 1 to 4)",
-        "link": null,
+        "link": "https://drive.google.com/file/d/1qRo20Yt5eINN1lPWWWBxSd0cGmjzc-us/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 458.73,
         "costPerPerson": 65.53285714,
-        "responsible": "Susana Fernandez",
-        "notes": "Paid €50.14 / Free payment and cancellation before Jul 30, 2026, 14:00 (local time)",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagat 50,14€ / Pagament i cancel·lació gratuïta abans del 30 jul. 2026 14:00 (Hora local)",
+        "notesLink": null,
+        "checkIn": "dia 1 a les 14.00",
+        "checkInLink": "https://www.google.com/maps/place/Nissan+Rent-A-Car/@33.5843715,130.4414367,8038m/data=!3m1!1e3!4m6!3m5!1s0x35418fdf76b5bbb9:0x7265f7bda34ff55e!8m2!3d33.5976424!4d130.4488005!16s%2Fg%2F1v_vqps3?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": "dia 4 a les 10.00",
+        "checkOutLink": "https://www.google.com/maps/place/Nissan+Rent-a-car+Kumamoto+Airport+store/@32.8351663,130.8589233,633m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3540e5fbf83b1503:0x6edc4000474558a3!8m2!3d32.8351618!4d130.8614982!16s%2Fg%2F1ttytj31?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D"
       },
       {
-        "date": null,
+        "id": "hotel-fukuoka-1-ago",
+        "date": "2026-08-01",
         "concept": "Hotel Fukuoka (Aug 1)",
-        "link": "https://www.booking.com/Share-P8Exnq7",
+        "link": "https://drive.google.com/file/d/1RsaDWzQ9Y4F2SssxfrsT7Xa_S_ClNgIJ/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 356,
         "costPerPerson": 50.85714286,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment 23/07 and cancellation 24/07",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament 22/07 (23/07) i cancel·lació 24/07",
+        "notesLink": null,
+        "checkIn": "15.00 a 23.00",
+        "checkInLink": "https://www.google.com/maps/search/Adre%C3%A7a:+%E4%BD%8F%E5%90%894%E4%B8%81%E7%9B%AE22%E2%88%927,+Hakata+Ward,+%E7%A6%8F+%E5%B2%A1%E5%B8%82,+812-0018,+Jap%C3%B3/@33.5818194,130.4038044,1254m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": "00.00 a 10.00",
+        "checkOutLink": null
       },
       {
-        "date": null,
-        "concept": "Takachiho (Aug 2-3)",
-        "link": "https://www.booking.com/hotel/jp/takachiho-sanso-amaterasu-kagetsu.ca.html?aid=2415161&label=metakayak-linkdsk-hrcomparetoes-city-M236673_los-01_bw-168_curr-EUR_nrm-02_gstadt-07_gstkid-00_lang-es_clkid-fiHjSDs_UVmmqezuEW0AH7_XPyMNFTbQ-Md4IXvOQ~d4a0MFSLEKT",
-        "status": "Reserved (balance due)",
-        "statusKey": "reserved",
-        "costTotal": 622,
-        "costPerPerson": 88.85714286,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment and cancellation 27/07",
-        "notesLink": null
-      },
-      {
+        "id": "cova-reigando",
         "date": null,
         "concept": "Reigando Cave",
-        "link": "https://maps.app.goo.gl/YVG8JTDLUvFCZqwA7",
+        "link": null,
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 10.59,
         "costPerPerson": 1.512857143,
-        "responsible": "Susana Fernandez",
-        "notes": "Toll route\nKyushu expressway info",
-        "notesLink": "https://search.w-nexco.co.jp/en/route.php"
+        "responsible": "Susana",
+        "notes": "Ruta amb peatge\nInfo autopistes Kyushu",
+        "notesLink": "https://search.w-nexco.co.jp/en/route.php",
+        "checkIn": "8.00 a 17.00",
+        "checkInLink": "https://maps.app.goo.gl/YVG8JTDLUvFCZqwA7",
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "hotel-takachiho-2-3-ago",
+        "date": "2 a 4/8",
+        "concept": "Hotel Takachiho (2-3 ago)",
+        "link": "https://drive.google.com/file/d/1Svc6w_mkECt-hUD9bo6h3MMT-yU7Bjkg/view?usp=sharing",
+        "status": "Reservat (resta pagar)",
+        "statusKey": "reserved",
+        "costTotal": 622,
+        "costPerPerson": 88.85714286,
+        "responsible": "Susana",
+        "notes": "Pagament 25/07 i cancel·lació 27/07",
+        "notesLink": null,
+        "checkIn": "15.00 a 18.00",
+        "checkInLink": "https://www.google.com/maps/place/%E3%81%8A%E5%AE%BF+%E9%AB%98%E5%8D%83%E7%A9%82%E5%B1%B1%E8%8D%98+%E3%81%82%E3%81%BE%E3%81%A6%E3%82%89%E3%81%99%E3%83%BB%E3%81%8B%E3%81%90%E3%82%89/@32.7076943,131.3248247,633m/data=!3m1!1e3!4m10!3m9!1s0x35472d0003872cc7:0x831c1ee1a7730a39!5m3!1s2026-07-26!4m1!1i2!8m2!3d32.7076898!4d131.3273996!16s%2Fg%2F11msr0_rl4?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": "fins les 10.00",
+        "checkOutLink": null
+      },
+      {
+        "id": "barques-takachiho",
         "date": null,
         "concept": "Takachiho boats",
-        "link": "https://eipro.jp/takachiho1/terms/view/toppage?_gl=1*14cqwc5*_ga*NjE4NTI4Mzk0LjE3NzE4NzA0ODk.*_ga_15MWGPBF8P*czE3NzE4NzA0ODkkbzEkZzEkdDE3NzE4NzA2MjIkajU0JGwwJGgw",
+        "link": "https://en-62123.site-translation.com/boat/detail.php",
         "status": "Pending",
         "statusKey": "pending",
         "costTotal": 60,
         "costPerPerson": 8.571428571,
-        "responsible": "AMAYA PAREJA DE LOS SANTOS",
-        "notes": "2 weeks in advance",
-        "notesLink": null
+        "responsible": "Aamaya",
+        "notes": "2 setmanes abans",
+        "notesLink": null,
+        "checkIn": "a partir de les 8.30",
+        "checkInLink": "https://www.google.com/maps/place/%E9%AB%98%E5%8D%83%E7%A9%82%E5%B3%A1%E7%AC%AC1%E5%BE%A1%E5%A1%A9%E4%BA%95%E9%A7%90%E8%BB%8A%E5%A0%B4/@32.7016929,131.2977668,633m/data=!3m2!1e3!4b1!4m6!3m5!1s0x35472cde1003e825:0x881300a7395aeea3!8m2!3d32.7016884!4d131.3003417!16s%2Fg%2F11c2ls6s14?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "avio-anada-i-tornada-naha",
         "date": null,
         "concept": "Round-trip flight to Naha",
-        "link": null,
+        "link": "https://drive.google.com/file/d/1kit31aCvA7aMbN8Q3wmKPiS9dys3mVur/view?usp=sharing",
         "status": "Paid",
         "statusKey": "paid",
         "costTotal": 1211,
         "costPerPerson": 173,
-        "responsible": "Susana Fernandez",
+        "responsible": "Susana",
         "notes": null,
-        "notesLink": null
+        "notesLink": null,
+        "checkIn": "dia 4/8 12:50:00",
+        "checkInLink": "https://www.google.com/maps/place/Kumamoto+Airport/@32.8350023,130.856403,633m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3540e58a7c299055:0xe94ffd5a8413eef5!8m2!3d32.8349978!4d130.8589779!16s%2Fm%2F02pkz2d?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": "dia 7/8 12:30",
+        "checkOutLink": "https://www.google.com/maps/place/Naha+International+Airport/@26.2083498,127.6452912,1351m/data=!3m2!1e3!4b1!4m6!3m5!1s0x34e569c48e8b2c8d:0x504cceaa3756fe90!8m2!3d26.2001297!4d127.6466452!16zL20vMDNibmM3?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D"
       },
       {
+        "id": "tren-aeroport-hotel",
         "date": null,
         "concept": "Airport-to-hotel train",
-        "link": "http://www.daiichibus.jp/map/",
+        "link": null,
         "status": "Pending",
         "statusKey": "pending",
         "costTotal": 9.94,
         "costPerPerson": 1.42,
         "responsible": null,
-        "notes": null,
-        "notesLink": null
+        "notes": "Info",
+        "notesLink": "http://www.daiichibus.jp/map/",
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "hotel-naha-4-6-agost",
+        "date": "4 al 7/8",
         "concept": "Hotel Naha (Aug 4-6)",
-        "link": "https://www.booking.com/hotel/jp/condominium-riyuka-in-kume.es.html?label=naha-SfZVXWZ*iM7VvezZSCg1iwS392558418122%3Apl%3Ata%3Ap1125%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-184918856%3Alp9053354%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YdnZzv7u3SiOco5fpqS0",
+        "link": "https://drive.google.com/file/d/1ji2ml33bvoMpDAt-0UrZEAcLY24M1_YI/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 416,
         "costPerPerson": 59.42857143,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment on Jul 31 / Cancellation until Aug 1, 2026",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 30 jul. / Cancel·lació fins al 1 d’agost de 2026",
+        "notesLink": null,
+        "checkIn": "15.00 a 22.00",
+        "checkInLink": "https://www.google.com/maps/search/Naha+condominium+hotel+ryuka+in+kumea/@26.2200766,127.6927396,2701m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": "00.00 a 11.00",
+        "checkOutLink": null
       },
       {
+        "id": "tren-hotel-port-tomari",
         "date": null,
         "concept": "Hotel-to-Tomari-Port train",
-        "link": "http://www.daiichibus.jp/map/",
+        "link": null,
         "status": "Pending",
         "statusKey": "pending",
         "costTotal": 9.94,
         "costPerPerson": 1.42,
         "responsible": null,
-        "notes": null,
-        "notesLink": null
+        "notes": "Info",
+        "notesLink": "http://www.daiichibus.jp/map/",
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "ferry-anada-i-tornada-tokashiki",
         "date": null,
         "concept": "Round-trip ferry to Tokashiki",
-        "link": null,
+        "link": "https://drive.google.com/file/d/1Ta4TaXgZsRdgm_Mt2G8ki8GjLs3H6EFX/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 163.66,
         "costPerPerson": 23.38,
         "responsible": null,
-        "notes": "Booked 5/06!    30,240 yen\nMarine Line Ferry",
-        "notesLink": "https://www.vill.tokashiki.okinawa.jp/sempakujoho/2778.html"
+        "notes": "Reserva 5/06!    30.240 yens\nMarine Line Ferry",
+        "notesLink": "https://www.vill.tokashiki.okinawa.jp/sempakujoho/2778.html",
+        "checkIn": "Port Tomari 9-9.30",
+        "checkInLink": "https://www.google.com/maps/place/Tomari+Wharf+ferry+terminal+building+Tomarin+Building./@26.2235605,127.6811824,675m/data=!3m3!1e3!4b1!5s0x34e5697ff1a28a63:0x1891ffb7eb8ef95!4m6!3m5!1s0x34e5697f01de2d3b:0x61830d4226bbc833!8m2!3d26.2235557!4d127.6837573!16s%2Fg%2F11f7fv3xvq?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": "17:30",
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "tortugues-okinawa-5-ago",
+        "date": "2026-08-05",
         "concept": "OKINAWA TURTLES (Aug 5)",
-        "link": "https://keramatour.world-tours.jp/wp-content/uploads/2025/01/eb763f02fffc2078ebec6d85f83951b5.png",
+        "link": "https://drive.google.com/file/d/1Exk1RscUBS6qcwHC0_m0hc3DX3mYQLcg/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 252,
         "costPerPerson": 36,
-        "responsible": "Amaya Pareja de los Santos",
-        "notes": "Buy ferry tickets (Jun 5)",
-        "notesLink": null
+        "responsible": "Amaya",
+        "notes": null,
+        "notesLink": null,
+        "checkIn": "11:30 aprox",
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "tren-port-tomari-hotel",
+        "date": "2026-08-06",
         "concept": "Tomari-Port-to-hotel train",
         "link": null,
         "status": "Pending",
@@ -517,21 +583,14 @@
         "costPerPerson": 1.42,
         "responsible": null,
         "notes": null,
-        "notesLink": null
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
-        "concept": "Dojo training",
-        "link": null,
-        "status": "Pending",
-        "statusKey": "pending",
-        "costTotal": 320,
-        "costPerPerson": 45.71428571,
-        "responsible": null,
-        "notes": null,
-        "notesLink": null
-      },
-      {
+        "id": "bus-okinawa-karate-kaikan",
         "date": null,
         "concept": "Bus to Okinawa Karate Kaikan",
         "link": null,
@@ -540,10 +599,15 @@
         "costTotal": 14.56,
         "costPerPerson": 2.08,
         "responsible": null,
-        "notes": "The most direct option.\nCraft Center next door, and the Funakoshi Monument on foot takes the same time as the bus (33 min).",
-        "notesLink": null
+        "notes": "Opció més directa.\nCentre Artesania al costat i Monument Funakoshi a peu és igual que en bus (33 min).",
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "tren-castell-de-shuri",
         "date": null,
         "concept": "Train to Shuri Castle",
         "link": null,
@@ -553,33 +617,65 @@
         "costPerPerson": 1.97,
         "responsible": null,
         "notes": null,
-        "notesLink": null
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "entrenament-dojo-traditional-okinawan-goju-ryu-karate",
         "date": null,
-        "concept": "Shinkansen (JR Kansai-Hiroshima Area Pass)",
+        "concept": "Entrenament Dojo (Traditional Okinawan Goju Ryu Karate)",
         "link": null,
+        "status": "Pendent",
+        "statusKey": "pending",
+        "costTotal": 320,
+        "costPerPerson": 45.71428571,
+        "responsible": null,
+        "notes": null,
+        "notesLink": null,
+        "checkIn": "18:30 h",
+        "checkInLink": "https://maps.app.goo.gl/rFZ8hTexTStQ5p2GA",
+        "checkOut": null,
+        "checkOutLink": null
+      },
+      {
+        "id": "shinkansen-jr-kansai-hiroshima-area-pass",
+        "date": "2026-08-07",
+        "concept": "Shinkansen (JR Kansai-Hiroshima Area Pass)",
+        "link": "https://drive.google.com/drive/folders/1rKZC4e7TREirkmO9hTestpUhj1GA_02H?usp=drive_link",
         "status": "Paid",
         "statusKey": "paid",
         "costTotal": 651,
         "costPerPerson": 93,
-        "responsible": "Susana Fernandez",
-        "notes": "JR West Japan  Hotel 8 min on foot from the station.\nKansai-Hiroshima Area Pass (€93)",
-        "notesLink": "https://www.japan-experience.com/es/transporte/pases-regionales/kansai-y-oeste-de-japon/kansai-hiroshima-area-pass?market=es&gad_source=1&gad_campaignid=21422274218&gbraid=0AAAAADstuACO5c2nehIn3bTmvDRL2laoH&gclid=CjwKCAjw5s_QBhAdEiwADD_gBiZ-70ZQRKi7x2IAXp"
+        "responsible": "Susana",
+        "notes": "JR West Japan  Hotel a 8min a peu de l'estació.\nKansai-Hiroshima Area Pass (93€)",
+        "notesLink": "https://www.japan-experience.com/es/transporte/pases-regionales/kansai-y-oeste-de-japon/kansai-hiroshima-area-pass?market=es&gad_source=1&gad_campaignid=21422274218&gbraid=0AAAAADstuACO5c2nehIn3bTmvDRL2laoH&gclid=CjwKCAjw5s_QBhAdEiwADD_gBiZ-70ZQRKi7x2IAXp",
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "hotel-hiroshima-7-8-agost",
+        "date": "7 al 9/8",
         "concept": "Hotel Hiroshima (Aug 7-8)",
-        "link": "https://www.booking.com/hotel/jp/toyoko-inn-hiroshima-eki-stadium-mae.ca.html?aid=2311236&label=ca-es-booking-desktop-QgQ8GdysLGUHE6lg7duhYAS652796017350%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9208246%3Ali%3Adec%3Adm&sid=6d5c90f723a",
+        "link": "https://drive.google.com/file/d/1x2pjHnN00qIyPNoKdNvTfQGV3Ek8lKfr/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 473,
         "costPerPerson": 67.57142857,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment on Jul 2 / Cancellation until Aug 3, 2026",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 3 ago. / Cancel·lació fins al 5 d’agost de 2026",
+        "notesLink": null,
+        "checkIn": "a partir de les 15.00",
+        "checkInLink": "https://maps.app.goo.gl/3Nf7XQx82cNdA9SD8",
+        "checkOut": "Fins les 10.00",
+        "checkOutLink": null
       },
       {
+        "id": "ferry-miyajima",
         "date": null,
         "concept": "Miyajima ferry",
         "link": null,
@@ -588,35 +684,50 @@
         "costTotal": null,
         "costPerPerson": null,
         "responsible": null,
-        "notes": "https://jr-miyajimaferry.co.jp/\nKansai-Hiroshima Area Pass (€93)",
-        "notesLink": "https://jr-miyajimaferry.co.jp/"
+        "notes": "https://jr-miyajimaferry.co.jp/\nKansai-Hiroshima Area Pass (93€)",
+        "notesLink": "https://jr-miyajimaferry.co.jp/",
+        "checkIn": "Comprar bitllets",
+        "checkInLink": "https://maps.app.goo.gl/ED2xPtWx5ukGYHsa9",
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "ferry-matsuyama",
         "date": null,
         "concept": "Matsuyama ferry",
-        "link": null,
+        "link": "https://drive.google.com/file/d/1GGUspvjSAi24BRIzRffEnowht2BQjbyl/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 370.23,
         "costPerPerson": 52.89,
         "responsible": null,
-        "notes": "Hiroshima Dentetsu tram (€1.42)\nMatsuyama ferry  (€47.98, check again Aug 1!)\nIyotetsu + Shikoku Railway trains (€3.49)",
-        "notesLink": "https://setonaikaikisen.co.jp/language/en/superjet/"
+        "notes": "Hiroshima Dentetsu-Tramvia (1,42€)\nFerry Matsuyama  (47,98€, revisió 1 ago!)\nIyotetsu + Shikoku Railway-Trens (3,49€)",
+        "notesLink": "https://setonaikaikisen.co.jp/language/en/superjet/",
+        "checkIn": "09:05",
+        "checkInLink": "https://maps.app.goo.gl/GApd4d9UT1Z6pqDZA",
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "hotel-matsuyama-9-ago",
+        "date": "2026-08-09",
         "concept": "Hotel Matsuyama (Aug 9)",
-        "link": "https://www.hoteles.com/en/ho1551402336/seapa-no-yu/?chkin=2026-03-19&chkout=2026-03-20&x_pwa=1&rfrr=HSR&pwa_ts=1773308077433&referrerUrl=aHR0cHM6Ly93d3cuaG90ZWxlcy5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=553248621562272171&destination=Temp",
+        "link": "https://drive.google.com/file/d/1l-VqE6VGC9mQdZQvFIFqLsWi_fzmYueA/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 404,
         "costPerPerson": 57.71428571,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment on Aug 5 / Cancellation until Aug 7, 2026",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 5 ago. / Cancel·lació fins al 7 d’agost de 2026",
+        "notesLink": null,
+        "checkIn": "16.00 a 23.00",
+        "checkInLink": "https://maps.app.goo.gl/hosBxctaPe82o5La8",
+        "checkOut": "00.00 a 10.00",
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "tren-a-sangawacho",
+        "date": "2026-08-10",
         "concept": "Train to Sangawacho",
         "link": null,
         "status": "Pending",
@@ -625,189 +736,303 @@
         "costPerPerson": 10.96,
         "responsible": null,
         "notes": "Shikoku Railway",
-        "notesLink": "https://www.jr-shikoku.co.jp/global/en/"
+        "notesLink": "https://www.jr-shikoku.co.jp/global/en/",
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "tren-a-okayama",
         "date": null,
-        "concept": "Shinkansen to Okayama",
-        "link": null,
-        "status": "Pending",
+        "concept": "Tren a Okayama",
+        "link": "https://drive.google.com/drive/folders/1rKZC4e7TREirkmO9hTestpUhj1GA_02H?usp=drive_link",
+        "status": "Pendent",
         "statusKey": "pending",
         "costTotal": 152.25,
         "costPerPerson": 21.75,
         "responsible": null,
-        "notes": "Shikoku Railway\n16 min on foot to the hotel.\nKansai-Hiroshima Area Pass (€93)",
-        "notesLink": "https://www.jr-shikoku.co.jp/global/en/"
+        "notes": "Shikoku Railway\n16 min a peu fins hotel.\nKansai-Hiroshima Area Pass (93€)",
+        "notesLink": "https://www.jr-shikoku.co.jp/global/en/",
+        "checkIn": "Comprar bitllets",
+        "checkInLink": "https://maps.app.goo.gl/swGDpXLfh5tsDEGE7",
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "hotel-okayama-10-ago",
         "date": null,
         "concept": "Hotel Okayama (Aug 10)",
-        "link": "https://www.booking.com/Share-5HVl7D",
+        "link": "https://drive.google.com/file/d/1IuDQdB-_BZ3MoDFwxcI1MdqLkhaRica8/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 194,
         "costPerPerson": 27.71428571,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment on Aug 5 / Cancellation until Aug 8, 2026",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 5 ago. / Cancel·lació fins al 7 d’agost de 2026",
+        "notesLink": null,
+        "checkIn": "a partir de les 15.00",
+        "checkInLink": "https://maps.app.goo.gl/U4oSNVrcdCDnwH5f8",
+        "checkOut": "Fins les 10.00",
+        "checkOutLink": null
       },
       {
+        "id": "tren-a-kurashiki-anada-canal-antic",
         "date": null,
-        "concept": "Train to Kurashiki (old canal)",
+        "concept": "Tren a Kurashiki anada (canal antic)",
         "link": "https://maps.app.goo.gl/QjtKkpirZgghg2Zh9",
-        "status": "Pending",
+        "status": "Pendent",
         "statusKey": "pending",
         "costTotal": 12.26,
         "costPerPerson": 1.751428571,
         "responsible": null,
-        "notes": "JR West Japan\nKansai-Hiroshima Area Pass (€93)",
-        "notesLink": "https://www.westjr.co.jp/"
+        "notes": "JR West Japan\nKansai-Hiroshima Area Pass (93€)",
+        "notesLink": "https://www.westjr.co.jp/",
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "tren-de-kurashiki-tornada-canal-antic",
         "date": null,
-        "concept": "Train from Kurashiki (old canal)",
+        "concept": "Tren de Kurashiki tornada (canal antic)",
         "link": "https://maps.app.goo.gl/QjtKkpirZgghg2Zh9",
-        "status": "Pending",
+        "status": "Pendent",
         "statusKey": "pending",
         "costTotal": 12.26,
         "costPerPerson": 1.751428571,
         "responsible": null,
-        "notes": "JR West Japan\nKansai-Hiroshima Area Pass (€93)",
-        "notesLink": "https://www.westjr.co.jp/"
+        "notes": "JR West Japan\nKansai-Hiroshima Area Pass (93€)",
+        "notesLink": "https://www.westjr.co.jp/",
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "shinkansen-a-osaka",
+        "date": "2026-08-11",
         "concept": "Shinkansen to Osaka",
-        "link": null,
+        "link": "https://drive.google.com/drive/folders/1rKZC4e7TREirkmO9hTestpUhj1GA_02H?usp=drive_link",
         "status": "Pending",
         "statusKey": "pending",
         "costTotal": null,
         "costPerPerson": null,
         "responsible": null,
-        "notes": "JR West Japan\nKansai-Hiroshima Area Pass (€93)",
-        "notesLink": "https://www.westjr.co.jp/"
+        "notes": "JR West Japan\nKansai-Hiroshima Area Pass (93€)",
+        "notesLink": "https://www.westjr.co.jp/",
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "hotel-osaka-11-ago",
         "date": null,
         "concept": "Hotel Osaka (Aug 11)",
-        "link": "https://www.booking.com/Share-bOAKPs",
+        "link": "https://drive.google.com/file/d/17M5MCHxtsqum2cl9wO9qR35rpvh95ziW/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 185,
         "costPerPerson": 26.42857143,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment on Aug 7 / Cancellation until Aug 9, 2026",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 7 ago. / Cancel·lació fins al 9 d’agost de 2026",
+        "notesLink": null,
+        "checkIn": "a partir de les 15.00",
+        "checkInLink": "https://maps.app.goo.gl/zrBD1oWwpRxP7TwF6",
+        "checkOut": "Fins les 10.00",
+        "checkOutLink": null
       },
       {
-        "date": null,
-        "concept": "Hotel Koyasan (Aug 12)",
-        "link": "https://www.booking.com/hotel/jp/koyasan-guest-house-tommy.ca.html?aid=2311236&label=ca-es-booking-desktop-QgQ8GdysLGUHE6lg7duhYAS652796017350%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9208246%3Ali%3Adec%3Adm-Share-XpdgYN%401770899656&",
-        "status": "Reserved (balance due)",
-        "statusKey": "reserved",
-        "costTotal": 265,
-        "costPerPerson": 37.85714286,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment on Aug 7 / Cancellation until Aug 9, 2026",
-        "notesLink": null
-      },
-      {
-        "date": null,
-        "concept": "Koyasan Temple (Aug 12)",
-        "link": "https://www.booking.com/hotel/jp/sainanin-koya.ca.html?aid=318615&label=New_Spanish_ES_ES_21463012705-MdTXWB4HpKUSCKFdbQ0nigS640874830729%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-64415224945%3Alp9221607%3Ali%3Adec%3Adm%3Aag21463012705%3Acmp3402077",
-        "status": "Reserved (balance due)",
-        "statusKey": "reserved",
-        "costTotal": 199,
-        "costPerPerson": 28.42857143,
-        "responsible": "Susana Fernandez",
-        "notes": "Only 1 room (Susana and Pep). Add the cost to the total price per person.\nPayment on Aug 8 / Cancellation until Aug 10, 2026",
-        "notesLink": null
-      },
-      {
-        "date": null,
+        "id": "cotxe-osaka-kioto-12-14-agost",
+        "date": "12 al 14/8",
         "concept": "Car Osaka-Kyoto (Aug 12-14)",
-        "link": null,
+        "link": "https://drive.google.com/file/d/1eMCvsrOF3tQLPfnqIYuXKLgjUbtu3GgE/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 295.8,
         "costPerPerson": 42.25714286,
-        "responsible": "Susana Fernandez",
-        "notes": "Payment on pickup / Free cancellation before Aug 12, 2026, 10:00 (local time)",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament al recollir / Cancel·lació gratuïta abans del 12 ago. 2026 10:00 (Hora local)",
+        "notesLink": null,
+        "checkIn": "dia 12/8 a les 10.00",
+        "checkInLink": "https://maps.app.goo.gl/rQTa8qUYAwkcNTjj8",
+        "checkOut": "dia 14 a les 10.00",
+        "checkOutLink": "https://maps.app.goo.gl/rW41KKEmiZYhvW6m6"
       },
       {
-        "date": null,
+        "id": "hotel-koyasan-12-ago",
+        "date": "2026-08-12",
+        "concept": "Hotel Koyasan (Aug 12)",
+        "link": "https://drive.google.com/file/d/1vyVqAFSimbszMbWT43HzJQuntJ8Xky1H/view?usp=drive_link",
+        "status": "Reserved (balance due)",
+        "statusKey": "reserved",
+        "costTotal": 265,
+        "costPerPerson": 37.85714286,
+        "responsible": "Susana",
+        "notes": "Pagament el 7 ago. / Cancel·lació fins al 9 d’agost de 2026",
+        "notesLink": null,
+        "checkIn": "14.30 a 18.00",
+        "checkInLink": "https://maps.app.goo.gl/KX3JNQHgf94C55rX6",
+        "checkOut": "05.00 a 10.00",
+        "checkOutLink": null
+      },
+      {
+        "id": "temple-koyasan-12-ago",
+        "date": "2026-08-12",
+        "concept": "Koyasan Temple (Aug 12)",
+        "link": "https://drive.google.com/file/d/1mteSaWOZL-Z2SS97_ZsIw4D5FqL9MQwC/view?usp=drive_link",
+        "status": "Reserved (balance due)",
+        "statusKey": "reserved",
+        "costTotal": 199,
+        "costPerPerson": 28.42857143,
+        "responsible": "Susana",
+        "notes": "Només 1 hab (Susana i Pep). Sumar el cost al preu total per persona.\nPagament el 8 ago. / Cancel·lació fins al 10 d’agost de 2026",
+        "notesLink": null,
+        "checkIn": "15.00 a 17.00",
+        "checkInLink": "https://maps.app.goo.gl/LSpz266BBqmY2Kmc7",
+        "checkOut": "08.00 a 09.00",
+        "checkOutLink": null
+      },
+      {
+        "id": "wisterian-life-club-toba-13-ago",
+        "date": "2026-08-13",
         "concept": "Wisterian Life Club Toba (Aug 13)",
-        "link": "https://www.booking.com/hotel/jp/wisterian-life-club-toba.ca.html?aid=311090&label=wisterian-life-club-toba-n34Sfhv4lk_Wg1QuwCiv_AS261004568535%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-283667098448%3Alp9217790%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVY",
+        "link": "https://drive.google.com/file/d/1HhikZxBTGMqSDLcMbjIozzjP_GYWQyzM/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 357,
         "costPerPerson": 51,
-        "responsible": "Amaya Pareja de los Santos",
-        "notes": null,
-        "notesLink": null
+        "responsible": "Amaya",
+        "notes": "Pagament el 7 d'ago. / Cancel·lació fins al 10 d'agost de 2026",
+        "notesLink": null,
+        "checkIn": "15.00 a 20.00",
+        "checkInLink": "https://maps.app.goo.gl/E4QoAzVMMnGEwrheA",
+        "checkOut": "07.30 a 10.00",
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "hotel-uu-in-kyoto-14-15-16",
+        "date": "14 al 17/8",
         "concept": "Hotel UU Inn Kyoto (Aug 14-15-16)",
-        "link": "https://www.booking.com/hotel/jp/you-you-inn.ca.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaEaIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AuCztswGwAIB0gIkNGI4MTAyOTktMzYxNy00NDMwLTg3YjctY2ExYTNiODFmOTJl2AIB4AIB-Share-Qfsxjp%401770895066&sid=c97dba2d58f08f5",
+        "link": "https://drive.google.com/file/d/13U-JUgn-DubkYxLJLLVHe1Ix-VEhaS0u/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 420,
         "costPerPerson": 60,
-        "responsible": "Susana Fernandez",
-        "notes": "Return the car at 10:00, 11 minutes from the station",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 28 de jul. / Cancel·lació fins al 30 de juliol de 2026",
+        "notesLink": null,
+        "checkIn": "A partir de les 15.00",
+        "checkInLink": "https://maps.app.goo.gl/KQsB8vvHaZNUTEK46",
+        "checkOut": "Fins les 10.00",
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "cotxe-kyoto-17-18-19",
+        "date": "17 al 19/8",
         "concept": "Car Kyoto (Aug 17-18-19)",
-        "link": "https://maps.app.goo.gl/W9fkWPLs3m6gykaZ8",
+        "link": "https://drive.google.com/file/d/1kc1jd-p5ba8pUn87JTgzRRgcEQr8kirg/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 545,
         "costPerPerson": 77.85714286,
-        "responsible": "Susana Fernandez",
-        "notes": "Cancellation before Aug 17.\nREMEMBER TO RETURN THE CAR",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Cancel·lació abans del 17 ago.",
+        "notesLink": null,
+        "checkIn": "dia 17 a les 8.00",
+        "checkInLink": "https://maps.app.goo.gl/Ra5Qm6EEUzkKjVmq9",
+        "checkOut": "dia 19 a les 18.00",
+        "checkOutLink": "https://maps.app.goo.gl/h941U7RwcnG3e6i38"
       },
       {
-        "date": null,
+        "id": "hotel-mina-s-lanternhouse-takayama-17-ago",
+        "date": "2026-08-17",
         "concept": "Hotel Mina's LanternHouse TAKAYAMA (Aug 17)",
-        "link": "https://www.booking.com/hotel/jp/minas-lanternhouse.ca.html?aid=2311236&label=ca-es-booking-desktop-QgQ8GdysLGUHE6lg7duhYAS652796017350%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9217790%3Ali%3Adec%3Adm&sid=b09b62468ad09ca8060fcd346c986",
+        "link": "https://drive.google.com/file/d/1if-rUsUyyHie82loCVCHGsDiuBXT2FYR/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 266,
         "costPerPerson": 38,
-        "responsible": "Susana Fernandez",
-        "notes": "Pay Aug 9, cancel by 12",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 9 d'ago. / Cancel·lació fins a l'11 d'agost de 2026",
+        "notesLink": null,
+        "checkIn": "15.00 a 00.00",
+        "checkInLink": "https://www.google.com/maps/place/Minas+LanternHouse+Private+house+near+the+old+t+%2F+Takayama+Gifu/@36.1485157,137.2547133,20.59z/data=!4m20!1m8!3m7!1s0x6002bad53973c3f9:0x678702e351d5da56!2s2+Chome+Kandamachi,+Takayama,+Prefectura+de+Gifu+506-0006,+Jap%C3%B3!3b1!8m2!3d36.1483654!4d137.254827!16s%2Fg%2F1pxyfh9kf!3m10!1s0x6002bad50c0072f3:0xc9257df1770ffd40!5m3!1s2026-07-26!4m1!1i2!8m2!3d36.148365!4d137.2548218!16s%2Fg%2F11yyst293f!17BQ0FF?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D",
+        "checkOut": "00.00 a 10.00",
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "hotel-hotel-ab-nakatsugawa-18",
+        "date": "2026-08-18",
         "concept": "Hotel AB Nakatsugawa (Aug 18)",
-        "link": "https://www.booking.com/hotel/jp/ab-nakatsugawa.es.html?aid=811168&label=mkt123sc-f68e07ba-dd4b-4c0e-ac96-36acfa405760&sid=82309f005f924215da6577a8d84f276c&all_sr_blocks=1331122003_413548618_2_1_0%2C1331122003_413548618_2_1_0%2C1331122003_413548618_2_1_0%25",
+        "link": "https://drive.google.com/file/d/1fow0LtsBS-2oPEfhtF2BxulEXaHhOw5Q/view?usp=drive_link",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 193,
         "costPerPerson": 27.57142857,
-        "responsible": "Susana Fernandez",
-        "notes": "Pay Aug 13, cancel by 16",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament el 13 d'ago. / Cancel·lació fins a l'15 d'agost de 2026",
+        "notesLink": null,
+        "checkIn": "A partir de les 15.00",
+        "checkInLink": "https://maps.app.goo.gl/8DttfPjh9ipMJyno8",
+        "checkOut": "Fins les 10.00",
+        "checkOutLink": null
       },
       {
-        "date": null,
+        "id": "hotel-tokyo-19-i-20",
+        "date": "19 al 21/8",
         "concept": "Hotel Tokyo (Aug 19-20)",
-        "link": "https://www.booking.com/hotel/jp/hanayado-asakusa-2.es.html?aid=811168&label=mkt123sc-c3d61f26-8475-4497-bffe-76badb10faf3&sid=82309f005f924215da6577a8d84f276c&all_sr_blocks=1269664702_399712973_0_0_0&checkin=2026-08-19&checkout=2026-08-21&dest_id=1269664",
+        "link": "https://drive.google.com/file/d/1eZFRf41C0q7Ps0RJgQMMlC2AXOwoSGlS/view?usp=sharing",
         "status": "Reserved (balance due)",
         "statusKey": "reserved",
         "costTotal": 382,
         "costPerPerson": 54.57142857,
-        "responsible": "Susana Fernandez",
-        "notes": "Cancellation before Aug 13.\nREMEMBER TO RETURN THE CAR",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagament l'11 d'ago. / Cancel·lació fins al 13 d'agost de 2026",
+        "notesLink": null,
+        "checkIn": "A partir de les 16.00",
+        "checkInLink": "https://maps.app.goo.gl/dPEhhCK2JTNvbFQr9",
+        "checkOut": "Fins les 10.00",
+        "checkOutLink": null
       },
       {
+        "id": "entrada-museu-ghibli",
+        "date": "2026-08-20",
+        "concept": "Entrada Museu Ghibli",
+        "link": "https://drive.google.com/file/d/1hPWodfNnvrD7MLkviM0nlER_790_zZpV/view?usp=drive_link",
+        "status": null,
+        "statusKey": "unknown",
+        "costTotal": null,
+        "costPerPerson": null,
+        "responsible": null,
+        "notes": null,
+        "notesLink": null,
+        "checkIn": "16.00",
+        "checkInLink": "https://maps.app.goo.gl/yGZSxfBT7Gfv9JhL8",
+        "checkOut": null,
+        "checkOutLink": null
+      },
+      {
+        "id": "entrades-team-labs",
+        "date": "2026-08-21",
+        "concept": "teamLab tickets",
+        "link": "https://drive.google.com/file/d/1evgbFkweL9RBebWvNJ5b8xBC3i2yMSR7/view?usp=sharing",
+        "status": "Paid",
+        "statusKey": "paid",
+        "costTotal": 190.19,
+        "costPerPerson": 27.17,
+        "responsible": null,
+        "notes": null,
+        "notesLink": null,
+        "checkIn": "11:30",
+        "checkInLink": "https://maps.app.goo.gl/rQF5heJPrvJWQwsC9",
+        "checkOut": null,
+        "checkOutLink": null
+      },
+      {
+        "id": "taxi-tornada-haneda",
         "date": null,
         "concept": "Taxi to Haneda (return)",
         "link": null,
@@ -817,21 +1042,14 @@
         "costPerPerson": 21.42857143,
         "responsible": null,
         "notes": null,
-        "notesLink": null
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
-        "date": null,
-        "concept": "teamLab tickets",
-        "link": null,
-        "status": "Paid",
-        "statusKey": "paid",
-        "costTotal": 190.19,
-        "costPerPerson": 27.17,
-        "responsible": null,
-        "notes": null,
-        "notesLink": null
-      },
-      {
+        "id": "avio-tornada",
         "date": null,
         "concept": "Return flight",
         "link": null,
@@ -839,11 +1057,16 @@
         "statusKey": "paid",
         "costTotal": 3465,
         "costPerPerson": 495,
-        "responsible": "Amaya Pareja de los Santos",
+        "responsible": "Amaya",
         "notes": null,
-        "notesLink": null
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       },
       {
+        "id": "regals",
         "date": null,
         "concept": "Gifts",
         "link": null,
@@ -851,9 +1074,13 @@
         "statusKey": "paid",
         "costTotal": 46.37,
         "costPerPerson": 6.624285714,
-        "responsible": "Susana Fernandez",
-        "notes": "Paid by Susana - Ratafia, cookies,...",
-        "notesLink": null
+        "responsible": "Susana",
+        "notes": "Pagat Susana - Ratfia, galetes,...",
+        "notesLink": null,
+        "checkIn": null,
+        "checkInLink": null,
+        "checkOut": null,
+        "checkOutLink": null
       }
     ],
     "total": {
@@ -8324,35 +8551,35 @@
       ]
     },
     "10": {
-      "title": "DAY 10 — Monday, August 10",
+      "title": "DIA 10 — Dilluns 10 d'agost",
       "sections": [
         {
           "text": "Matsuyama → Niihama → Okayama",
           "children": []
         },
         {
-          "text": "Meeting Sangawa sensei and heading over to Honshū",
+          "text": "Trobada amb el mestre Sangawa i trasllat cap a Honshū",
           "children": []
         },
         {
-          "text": "Goal for the day",
+          "text": "Objectiu del dia",
           "children": []
         },
         {
-          "text": "This is one of the most personal days of the trip. The priority is the visit to Sangawa sensei in Niihama. Once that's done, the route continues to Okayama, where you'll spend the night so you can start visiting Korakuen and Kurashiki the next day without rushing.",
+          "text": "Aquest és un dels dies més personals del viatge. La prioritat és la visita al mestre Sangawa a Niihama. Un cop finalitzada, el recorregut continua fins a Okayama, on passareu la nit per començar l'endemà la visita a Korakuen i Kurashiki sense presses.",
           "children": [
             {
-              "text": "It's mainly a travel day, but a much more balanced one than trying to push all the way to Osaka.",
+              "text": "És un dia principalment de trasllats, però molt més equilibrat que intentar arribar fins a Osaka.",
               "children": []
             }
           ]
         },
         {
-          "text": "Day summary",
+          "text": "Fitxa del dia",
           "children": []
         },
         {
-          "text": "Departure",
+          "text": "Sortida",
           "children": [
             {
               "text": "Seapa no Yu (シーパの湯)",
@@ -8362,10 +8589,10 @@
           ]
         },
         {
-          "text": "Arrival",
+          "text": "Arribada",
           "children": [
             {
-              "text": "Hotel in Okayama",
+              "text": "Hotel a Okayama",
               "children": [],
               "link": "https://maps.app.goo.gl/1XnVqvaXcGyn1Pp68"
             }
@@ -8375,20 +8602,20 @@
           "text": "Transport",
           "children": [
             {
-              "text": "Rental car + ferry (or the Seto Bridge, depending on the final route)",
+              "text": "Cotxe de lloguer + ferri (o pont de Seto, segons la ruta definitiva)",
               "children": []
             }
           ]
         },
         {
-          "text": "Distance (approx.)",
+          "text": "Distància aproximada",
           "children": [
             {
               "text": "170-200 km",
               "children": []
             },
             {
-              "text": "Driving time",
+              "text": "Temps de conducció",
               "children": []
             },
             {
@@ -8398,7 +8625,7 @@
           ]
         },
         {
-          "text": "Walking time",
+          "text": "Temps caminant",
           "children": [
             {
               "text": "3-4 km",
@@ -8407,11 +8634,11 @@
           ]
         },
         {
-          "text": "Estimated budget",
+          "text": "Pressupost aproximat",
           "children": []
         },
         {
-          "text": "Item",
+          "text": "Concepte",
           "children": [
             {
               "text": "Cost",
@@ -8420,7 +8647,7 @@
           ]
         },
         {
-          "text": "Gas",
+          "text": "Benzina",
           "children": [
             {
               "text": "15-20 €",
@@ -8429,7 +8656,7 @@
           ]
         },
         {
-          "text": "Tolls / Ferry",
+          "text": "Peatges / Ferri",
           "children": [
             {
               "text": "20-40 €",
@@ -8438,62 +8665,62 @@
           ]
         },
         {
-          "text": "Parking",
+          "text": "Aparcament",
           "children": [
             {
-              "text": "500-1,000 ¥",
+              "text": "500-1.000 ¥",
               "children": []
             }
           ]
         },
         {
-          "text": "Lunch",
+          "text": "Dinar",
           "children": [
             {
-              "text": "1,500 ¥",
+              "text": "1.500 ¥",
               "children": []
             }
           ]
         },
         {
-          "text": "Dinner",
+          "text": "Sopar",
           "children": [
             {
-              "text": "2,500 ¥",
+              "text": "2.500 ¥",
               "children": []
             }
           ]
         },
         {
-          "text": "Before you go",
+          "text": "Preparació abans de sortir",
           "children": [
             {
-              "text": "☐ Confirm the meeting time with Sangawa sensei.",
+              "text": "☐ Confirmar l'hora de la trobada amb el mestre Sangawa.",
               "children": []
             },
             {
-              "text": "☐ Bring the gift.",
+              "text": "☐ Portar el regal.",
               "children": []
             },
             {
-              "text": "☐ Bring the karategi (in case there's training).",
+              "text": "☐ Portar el karategi (si hi ha entrenament).",
               "children": []
             },
             {
-              "text": "☐ Check the car's fuel tank.",
+              "text": "☐ Revisar el dipòsit del cotxe.",
               "children": []
             }
           ]
         },
         {
-          "text": "Schedule",
+          "text": "Cronograma",
           "children": []
         },
         {
           "text": "07.00 h",
           "children": [
             {
-              "text": "Wake up",
+              "text": "Despertar",
               "children": []
             }
           ]
@@ -8502,11 +8729,11 @@
           "text": "07.30 h",
           "children": [
             {
-              "text": "Breakfast",
+              "text": "Esmorzar",
               "children": []
             },
             {
-              "text": "Make the most of the guesthouse breakfast before a day on the road.",
+              "text": "Aprofiteu l'esmorzar del guesthouse abans d'un dia de carretera.",
               "children": []
             }
           ]
@@ -8519,7 +8746,7 @@
               "children": []
             },
             {
-              "text": "Check that you haven't left anything at the accommodation.",
+              "text": "Revisar que no deixeu cap objecte a l'allotjament.",
               "children": []
             }
           ]
@@ -8528,20 +8755,20 @@
           "text": "08.30 h",
           "children": [
             {
-              "text": "Departure for Niihama",
+              "text": "Sortida cap a Niihama",
               "children": []
             }
           ]
         },
         {
-          "text": "Distance",
+          "text": "Distància",
           "children": [
             {
               "text": "≈75 km",
               "children": []
             },
             {
-              "text": "Time",
+              "text": "Temps",
               "children": []
             },
             {
@@ -8554,11 +8781,7 @@
           "text": "10.00 h",
           "children": [
             {
-              "text": "Arrival in Niihama",
-              "children": []
-            },
-            {
-              "text": "Time to park and get to the dojo or meeting point without rushing.",
+              "text": "Arribada a Niihama",
               "children": []
             }
           ]
@@ -8567,39 +8790,15 @@
           "text": "10.30 h",
           "children": [
             {
-              "text": "Meeting with Sangawa sensei",
+              "text": "Conèixer Sangawa (lloc natal del Mestre Kaji)",
               "children": []
             },
             {
-              "text": "Expected duration",
+              "text": "Durada prevista",
               "children": []
             },
             {
-              "text": "2-3 hours (still to be confirmed)",
-              "children": []
-            },
-            {
-              "text": "Depending on the program, it may include:",
-              "children": []
-            },
-            {
-              "text": "• a visit to the dojo;",
-              "children": []
-            },
-            {
-              "text": "• training;",
-              "children": []
-            },
-            {
-              "text": "• conversation;",
-              "children": []
-            },
-            {
-              "text": "• giving the gift;",
-              "children": []
-            },
-            {
-              "text": "• photos.",
+              "text": "2-3 hores (pendent de confirmar)",
               "children": []
             }
           ]
@@ -8608,15 +8807,15 @@
           "text": "13.00 h",
           "children": [
             {
-              "text": "Lunch",
+              "text": "Dinar",
               "children": []
             },
             {
-              "text": "A local restaurant in Niihama.",
+              "text": "Restaurant local de Niihama.",
               "children": []
             },
             {
-              "text": "It's a good chance to get away from the tourist areas.",
+              "text": "És una bona oportunitat per sortir de les zones turístiques.",
               "children": []
             }
           ]
@@ -8625,35 +8824,35 @@
           "text": "14.00 h",
           "children": [
             {
-              "text": "Departure for Okayama",
+              "text": "Sortida cap a Okayama",
               "children": []
             },
             {
-              "text": "The final route will depend on which transport option you've booked:",
+              "text": "La ruta definitiva dependrà del transport reservat:",
               "children": []
             },
             {
-              "text": "Option A (if you continue by car)",
+              "text": "Opció A (si continueu amb el cotxe)",
               "children": []
             },
             {
-              "text": "Cross the Seto-Ōhashi Bridge, one of Japan's great feats of engineering.",
+              "text": "Travessar el pont Seto-Ōhashi, una de les grans obres d'enginyeria del Japó.",
               "children": []
             },
             {
-              "text": "Approx. time",
+              "text": "Temps aproximat",
               "children": []
             },
             {
-              "text": "2 hours.",
+              "text": "2 hores.",
               "children": []
             },
             {
-              "text": "Option B (if you're taking a ferry)",
+              "text": "Opció B (si teniu previst un ferri)",
               "children": []
             },
             {
-              "text": "You'll need to adjust the schedule to the booking.",
+              "text": "Caldrà adaptar els horaris a la reserva.",
               "children": []
             }
           ]
@@ -8662,15 +8861,15 @@
           "text": "16.30 h",
           "children": [
             {
-              "text": "Stop at a service area",
+              "text": "Parada en una àrea de servei",
               "children": []
             },
             {
-              "text": "15-20 minutes",
+              "text": "15-20 minuts",
               "children": []
             },
             {
-              "text": "Japanese service areas are great for taking a break and picking up drinks or a snack.",
+              "text": "Les àrees de servei japoneses són excel·lents per descansar i comprar begudes o algun berenar.",
               "children": []
             }
           ]
@@ -8679,7 +8878,7 @@
           "text": "17.30 h",
           "children": [
             {
-              "text": "Arrival in Okayama",
+              "text": "Arribada a Okayama",
               "children": []
             },
             {
@@ -8691,7 +8890,7 @@
               "children": []
             },
             {
-              "text": "Time to rest.",
+              "text": "Temps per descansar.",
               "children": []
             }
           ]
@@ -8700,20 +8899,20 @@
           "text": "19.00 h",
           "children": [
             {
-              "text": "Dinner",
+              "text": "Sopar",
               "children": []
             }
           ]
         },
         {
-          "text": "Recommendation",
+          "text": "Recomanació",
           "children": [
             {
-              "text": "The area around Okayama Station.",
+              "text": "Barri de l'estació d'Okayama.",
               "children": []
             },
             {
-              "text": "Local specialties:",
+              "text": "Especialitats locals:",
               "children": []
             },
             {
@@ -8721,11 +8920,11 @@
               "children": []
             },
             {
-              "text": "• Demi-katsudon (breaded pork cutlet with demi-glace sauce).",
+              "text": "• Demi-katsudon (costella arrebossada amb salsa demi-glace).",
               "children": []
             },
             {
-              "text": "• Traditional Japanese cuisine.",
+              "text": "• Cuina japonesa tradicional.",
               "children": []
             }
           ]
@@ -8734,16 +8933,16 @@
           "text": "20.30 h",
           "children": [
             {
-              "text": "Evening stroll",
+              "text": "Passeig nocturn",
               "children": []
             }
           ]
         },
         {
-          "text": "If you still have energy, you can head to the station plaza or see the castle lit up from the outside (without going in).",
+          "text": "Si encara teniu energia, podeu acostar-vos a la plaça de l'estació o veure el castell il·luminat des de l'exterior (sense entrar-hi).",
           "children": [
             {
-              "text": "I don't recommend any more sightseeing today.",
+              "text": "No recomano fer més visites avui.",
               "children": []
             }
           ]
@@ -8752,11 +8951,11 @@
           "text": "21.30 h",
           "children": [
             {
-              "text": "Get ready for the next day",
+              "text": "Preparar el dia següent",
               "children": []
             },
             {
-              "text": "Tomorrow will be a much more sightseeing-heavy day:",
+              "text": "Demà serà un dia molt més turístic:",
               "children": []
             },
             {
@@ -8765,7 +8964,7 @@
               "link": "https://www.google.com/maps/search/?api=1&query=Okayama%20Korakuen%20Garden&query_place_id=ChIJhwt8jCQGVDURabQ6FPH0nXQ"
             },
             {
-              "text": "• Okayama Castle.",
+              "text": "• Castell d'Okayama.",
               "children": [],
               "link": "https://www.google.com/maps/search/?api=1&query=Okayama%20Castle&query_place_id=ChIJER_WDSUGVDURujV4pMtef44"
             },
@@ -8779,22 +8978,22 @@
               "children": []
             },
             {
-              "text": "Day summary",
+              "text": "Resum del dia",
               "children": []
             }
           ]
         },
         {
-          "text": "Item",
+          "text": "Concepte",
           "children": [
             {
-              "text": "Value",
+              "text": "Valor",
               "children": []
             }
           ]
         },
         {
-          "text": "Driving",
+          "text": "Conducció",
           "children": [
             {
               "text": "190 km",
@@ -8803,7 +9002,7 @@
           ]
         },
         {
-          "text": "Driving time",
+          "text": "Temps conduint",
           "children": [
             {
               "text": "3 h 30 min",
@@ -8812,7 +9011,7 @@
           ]
         },
         {
-          "text": "Walking time",
+          "text": "Temps caminant",
           "children": [
             {
               "text": "4 km",
@@ -8821,74 +9020,74 @@
           ]
         },
         {
-          "text": "Group budget",
+          "text": "Pressupost grup",
           "children": [
             {
               "text": "90-150 €",
               "children": []
             },
             {
-              "text": "Gas",
+              "text": "Benzina",
               "children": []
             }
           ]
         },
         {
-          "text": "Fill up the tank before leaving Shikoku. Tolls and gas stations are easier to find before the Seto Bridge.",
+          "text": "Ompliu el dipòsit abans de sortir de Shikoku. Els peatges i les benzineres són més fàcils de trobar abans del pont de Seto.",
           "children": []
         },
         {
-          "text": "Before you go",
+          "text": "Checklist",
           "children": [
             {
-              "text": "☐ Confirm check-in at the Okayama hotel.",
+              "text": "☐ Confirmar el check-in de l'hotel d'Okayama.",
               "children": []
             },
             {
-              "text": "☐ Get ready for the Korakuen visit.",
+              "text": "☐ Preparar la visita a Korakuen.",
               "children": [],
               "link": "https://www.google.com/maps/search/?api=1&query=Okayama%20Korakuen%20Garden&query_place_id=ChIJhwt8jCQGVDURabQ6FPH0nXQ"
             },
             {
-              "text": "☐ Charge batteries.",
+              "text": "☐ Carregar bateries.",
               "children": []
             },
             {
-              "text": "☐ Check the weather.",
+              "text": "☐ Revisar el temps.",
               "children": []
             }
           ]
         },
         {
-          "text": "Inconsistencies found",
+          "text": "Incongruències detectades",
           "children": []
         },
         {
-          "text": "2. Route to Okayama",
+          "text": "2. Ruta fins a Okayama",
           "children": []
         },
         {
-          "text": "The documents list several options (car, ferry, or a combination). You'll need to confirm which one you've booked, since it will affect your arrival time in Okayama.",
+          "text": "Als documents apareixen diverses opcions (cotxe, ferri o combinacions). Cal confirmar quina teniu reservada, perquè això afectarà l'hora d'arribada a Okayama.",
           "children": []
         },
         {
-          "text": "3. Visiting Okayama the same day",
+          "text": "3. Visitar Okayama aquest mateix dia",
           "children": [
             {
-              "text": "I don't recommend it.",
+              "text": "No ho recomano.",
               "children": []
             }
           ]
         },
         {
-          "text": "Korakuen and the Castle deserve an unhurried visit, and the morning light is much better. On top of that, you won't have to rush after the meeting in Niihama.",
+          "text": "Korakuen i el Castell mereixen una visita tranquil·la i la llum del matí és molt millor. A més, així no haureu de córrer després de la trobada a Niihama.",
           "children": []
         },
         {
-          "text": "Yes. In fact, I think it's best to keep exactly the same format we've been using, since it will be much easier to combine all the days into a single trip dossier later on.",
+          "text": "Sí. De fet, crec que és millor mantenir exactament el mateix format que hem anat utilitzant perquè després serà molt més fàcil unir tots els dies en un únic dossier de viatge.",
           "children": [
             {
-              "text": "JAPAN 2026",
+              "text": "JAPÓ 2026",
               "children": []
             }
           ]
