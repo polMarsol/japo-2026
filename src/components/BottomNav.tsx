@@ -6,6 +6,7 @@ const tabs: { to: string; labelKey: string; icon: IconName; end?: boolean }[] = 
   { to: "/", labelKey: "nav.home", icon: "home", end: true },
   { to: "/dies", labelKey: "nav.days", icon: "calendar_month" },
   { to: "/reserves", labelKey: "nav.reservations", icon: "hotel" },
+  { to: "/gastos", labelKey: "nav.expenses", icon: "account_balance_wallet" },
   { to: "/mapes", labelKey: "nav.maps", icon: "map" },
 ];
 

@@ -7,6 +7,7 @@ import { Home } from "./pages/Home";
 import { Days } from "./pages/Days";
 import { DayDetail } from "./pages/DayDetail";
 import { Reserves } from "./pages/Reserves";
+import { Expenses } from "./pages/Expenses";
 import { useAuth } from "./lib/auth";
 
 // Leaflet es pesado (~140kB): se separa en su propio chunk para no
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/dies" element={<Days />} />
           <Route path="/dies/:day" element={<DayDetail />} />
           <Route path="/reserves" element={<Reserves />} />
+          <Route path="/gastos" element={<Expenses />} />
           <Route
             path="/mapes"
             element={

@@ -46,6 +46,11 @@ import iconSave from "@material-symbols/svg-400/outlined/save.svg?raw";
 import iconClose from "@material-symbols/svg-400/outlined/close.svg?raw";
 import iconCheck from "@material-symbols/svg-400/outlined/check.svg?raw";
 import iconAdminPanelSettings from "@material-symbols/svg-400/outlined/admin_panel_settings.svg?raw";
+import iconRestaurant from "@material-symbols/svg-400/outlined/restaurant.svg?raw";
+import iconShoppingBag from "@material-symbols/svg-400/outlined/shopping_bag.svg?raw";
+import iconLocalActivity from "@material-symbols/svg-400/outlined/local_activity.svg?raw";
+import iconAccountBalanceWallet from "@material-symbols/svg-400/outlined/account_balance_wallet.svg?raw";
+import iconReceiptLong from "@material-symbols/svg-400/outlined/receipt_long.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -93,6 +98,11 @@ const ICONS = {
   close: iconClose,
   check: iconCheck,
   admin_panel_settings: iconAdminPanelSettings,
+  restaurant: iconRestaurant,
+  shopping_bag: iconShoppingBag,
+  local_activity: iconLocalActivity,
+  account_balance_wallet: iconAccountBalanceWallet,
+  receipt_long: iconReceiptLong,
 } as const;
 
 export type IconName = keyof typeof ICONS;
