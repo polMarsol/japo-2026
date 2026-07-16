@@ -39,6 +39,13 @@ import iconNearMe from "@material-symbols/svg-400/outlined/near_me.svg?raw";
 import iconLock from "@material-symbols/svg-400/outlined/lock.svg?raw";
 import iconBackspace from "@material-symbols/svg-400/outlined/backspace.svg?raw";
 import iconLogout from "@material-symbols/svg-400/outlined/logout.svg?raw";
+import iconEdit from "@material-symbols/svg-400/outlined/edit.svg?raw";
+import iconDelete from "@material-symbols/svg-400/outlined/delete.svg?raw";
+import iconAdd from "@material-symbols/svg-400/outlined/add.svg?raw";
+import iconSave from "@material-symbols/svg-400/outlined/save.svg?raw";
+import iconClose from "@material-symbols/svg-400/outlined/close.svg?raw";
+import iconCheck from "@material-symbols/svg-400/outlined/check.svg?raw";
+import iconAdminPanelSettings from "@material-symbols/svg-400/outlined/admin_panel_settings.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -79,6 +86,13 @@ const ICONS = {
   lock: iconLock,
   backspace: iconBackspace,
   logout: iconLogout,
+  edit: iconEdit,
+  delete: iconDelete,
+  add: iconAdd,
+  save: iconSave,
+  close: iconClose,
+  check: iconCheck,
+  admin_panel_settings: iconAdminPanelSettings,
 } as const;
 
 export type IconName = keyof typeof ICONS;

@@ -15,6 +15,7 @@ export function getPlacePhoto(place: string): PlacePhoto | undefined {
 }
 
 export function photoUrl(photo: PlacePhoto): string {
+  if (/^https?:\/\//.test(photo.file)) return photo.file;
   return `${import.meta.env.BASE_URL}${photo.file}`;
 }
 

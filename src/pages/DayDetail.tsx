@@ -4,22 +4,36 @@ import { useTranslation } from "react-i18next";
 import { getDay, useLocalizedDb } from "../lib/db";
 import { OutlineNode } from "../components/OutlineNode";
 import { PlaceHighlights } from "../components/PlaceHighlights";
+import { AdminItineraryEditor } from "../components/AdminItineraryEditor";
 import { Icon } from "../components/Icon";
 import { ChecklistProvider } from "../lib/checklist";
 import { useDayProgress, useDayNotes } from "../lib/dayState";
-import { regroupTree } from "../lib/outline";
+import { applyTextOverrides, flattenWithPaths, regroupTree } from "../lib/outline";
 import { buildAccommodationLinkMap, injectAccommodationLink } from "../lib/accommodationLinks";
+import { useDayTextOverrides } from "../lib/dayTextOverrides";
+import { useAuth } from "../lib/auth";
+import { syncEnabled } from "../lib/supabase";
 
 export function DayDetail() {
   const { t, i18n } = useTranslation();
   const db = useLocalizedDb(i18n.language);
   const { day } = useParams();
+  const { isAdmin } = useAuth();
   const outline = day ? getDay(db, day) : undefined;
-  const sections = useMemo(() => {
+  const baseSections = useMemo(() => {
     if (!outline || !day) return [];
     const accLink = buildAccommodationLinkMap(db)[day];
     return injectAccommodationLink(regroupTree(outline.sections), accLink);
   }, [outline, day, db]);
+  const { overrides, setOverride, clearOverride } = useDayTextOverrides(
+    day ?? "",
+    i18n.language,
+  );
+  const sections = useMemo(
+    () => applyTextOverrides(baseSections, overrides),
+    [baseSections, overrides],
+  );
+  const flatNodes = useMemo(() => flattenWithPaths(baseSections), [baseSections]);
   const { isDone, toggle } = useDayProgress();
   const { notes, setNotes } = useDayNotes(day ?? "");
 
@@ -63,6 +77,20 @@ export function DayDetail() {
         </div>
 
         <PlaceHighlights day={day} />
+
+        {isAdmin && !syncEnabled && (
+          <p className="rounded-xl border border-dashed border-line bg-surface p-3 text-xs text-muted">
+            {t("admin.syncDisabled")}
+          </p>
+        )}
+        {isAdmin && (
+          <AdminItineraryEditor
+            nodes={flatNodes}
+            overrides={overrides}
+            onSave={setOverride}
+            onRestore={clearOverride}
+          />
+        )}
 
         <div className="flex flex-col gap-3">
           {sections.map((node, i) => (

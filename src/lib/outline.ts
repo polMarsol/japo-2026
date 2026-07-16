@@ -161,3 +161,44 @@ export function regroupTree(nodes: DayNode[]): DayNode[] {
 
   return result.map((n) => ({ ...n, children: regroupTree(n.children) }));
 }
+
+export interface FlatOutlineNode {
+  path: string;
+  depth: number;
+  text: string;
+}
+
+/** Aplana el arbol final (tras regroupTree + injecciones) en una lista con
+ * un "path" estable por posicion, para el editor de texto de admin. Debe
+ * llamarse sobre el mismo arbol que se renderiza, para que los paths
+ * coincidan con applyTextOverrides. */
+export function flattenWithPaths(
+  nodes: DayNode[],
+  prefix = "",
+  depth = 0,
+): FlatOutlineNode[] {
+  const out: FlatOutlineNode[] = [];
+  nodes.forEach((node, i) => {
+    const path = prefix ? `${prefix}-${i}` : `${i}`;
+    out.push({ path, depth, text: node.text });
+    out.push(...flattenWithPaths(node.children, path, depth + 1));
+  });
+  return out;
+}
+
+/** Sustituye el texto de los nodos indicados por path (ver flattenWithPaths).
+ * No toca `link` ni la estructura: solo el contenido visible. */
+export function applyTextOverrides(
+  nodes: DayNode[],
+  overrides: Record<string, string>,
+  prefix = "",
+): DayNode[] {
+  return nodes.map((node, i) => {
+    const path = prefix ? `${prefix}-${i}` : `${i}`;
+    return {
+      ...node,
+      text: overrides[path] ?? node.text,
+      children: applyTextOverrides(node.children, overrides, path),
+    };
+  });
+}
