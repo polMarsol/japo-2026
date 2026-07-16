@@ -51,6 +51,8 @@ import iconShoppingBag from "@material-symbols/svg-400/outlined/shopping_bag.svg
 import iconLocalActivity from "@material-symbols/svg-400/outlined/local_activity.svg?raw";
 import iconAccountBalanceWallet from "@material-symbols/svg-400/outlined/account_balance_wallet.svg?raw";
 import iconReceiptLong from "@material-symbols/svg-400/outlined/receipt_long.svg?raw";
+import iconSmartToy from "@material-symbols/svg-400/outlined/smart_toy.svg?raw";
+import iconSend from "@material-symbols/svg-400/outlined/send.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -103,6 +105,8 @@ const ICONS = {
   local_activity: iconLocalActivity,
   account_balance_wallet: iconAccountBalanceWallet,
   receipt_long: iconReceiptLong,
+  smart_toy: iconSmartToy,
+  send: iconSend,
 } as const;
 
 export type IconName = keyof typeof ICONS;

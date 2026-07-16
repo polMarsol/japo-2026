@@ -8,6 +8,7 @@ import { Days } from "./pages/Days";
 import { DayDetail } from "./pages/DayDetail";
 import { Reserves } from "./pages/Reserves";
 import { Expenses } from "./pages/Expenses";
+import { ChatBot } from "./components/ChatBot";
 import { useAuth } from "./lib/auth";
 
 // Leaflet es pesado (~140kB): se separa en su propio chunk para no
@@ -43,6 +44,7 @@ export default function App() {
           />
         </Routes>
       </main>
+      <ChatBot />
       <BottomNav />
     </>
   );
