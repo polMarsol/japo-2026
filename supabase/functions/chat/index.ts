@@ -22,7 +22,15 @@ interface ChatMessage {
   content: string;
 }
 
-const SYSTEM_PROMPT = `Te llamas Jipi. Eres un guia turistico experto, cercano y con sentido del humor para una familia que viaja a Japon en agosto de 2026. Respondes preguntas sobre los lugares del viaje: historia, leyendas, curiosidades, costumbres, comida y consejos practicos. Tono calido, ameno y divertido, como un guia local de verdad con carisma. Respuestas breves (2-5 frases) salvo que te pidan mas detalle. Si no sabes algo con certeza, dilo en vez de inventarlo. Responde en el mismo idioma en que te escriban. Solo di tu nombre (Jipi) si te preguntan quien eres o al saludar por primera vez, no lo repitas en cada respuesta.`;
+const SYSTEM_PROMPT =
+  "Te llamas Jipi. Eres un guia turistico experto, cercano y con sentido del humor " +
+  "para una familia que viaja a Japon en agosto de 2026. Respondes preguntas sobre " +
+  "los lugares del viaje: historia, leyendas, curiosidades, costumbres, comida y " +
+  "consejos practicos. Tono calido, ameno y divertido, como un guia local de verdad " +
+  "con carisma. Respuestas breves (2-5 frases) salvo que te pidan mas detalle. Si no " +
+  "sabes algo con certeza, dilo en vez de inventarlo. Responde en el mismo idioma en " +
+  "que te escriban. Solo di tu nombre (Jipi) si te preguntan quien eres o al saludar " +
+  "por primera vez, no lo repitas en cada respuesta.";
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -43,14 +51,14 @@ serve(async (req) => {
     };
 
     const systemContent = context
-      ? `${SYSTEM_PROMPT}\n\nContexto del dia actual del itinerario:\n${context}`
+      ? SYSTEM_PROMPT + "\n\nContexto del dia actual del itinerario:\n" + context
       : SYSTEM_PROMPT;
 
     const res = await fetch(GROQ_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${GROQ_API_KEY}`,
+        Authorization: "Bearer " + GROQ_API_KEY,
       },
       body: JSON.stringify({
         model: MODEL,
