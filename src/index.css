@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Estrategia de tema manual (no solo prefers-color-scheme): .dark en <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-app-bg: #f7f7f8;
+  --color-surface: #ffffff;
+  --color-surface-2: #ffffff;
+  --color-line: rgba(0, 0, 0, 0.1);
+  --color-text: #111114;
+  --color-muted: #6b7280;
+  --color-accent: #dc2626;
+  --color-accent-soft: rgba(220, 38, 38, 0.1);
+  --color-chip: rgba(0, 0, 0, 0.06);
+  --color-chip-text: #27272a;
+}
+
+.dark {
+  --color-app-bg: #0b0b0f;
+  --color-surface: #17181d;
+  --color-surface-2: #121317;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --color-text: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-accent: #f87171;
+  --color-accent-soft: rgba(248, 113, 113, 0.15);
+  --color-chip: rgba(255, 255, 255, 0.08);
+  --color-chip-text: #e5e7eb;
+}
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-app-bg);
+  color: var(--color-text);
+  font: 16px/1.5 system-ui, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+  transition: background-color 0.15s ease;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+/* Respeta el notch/home-indicator cuando la PWA corre standalone en iOS/Android */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Iconos Material Symbols (SVG crudo importado con ?raw): heredan tamaño y color */
+.gicon {
+  width: 1em;
+  height: 1em;
+  line-height: 0;
+}
+.gicon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}

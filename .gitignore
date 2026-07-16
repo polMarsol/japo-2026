@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dev-dist/
+*.local
+.DS_Store
+*.stackdump
+UsersPOLMAR~1*
+Users*AppDataLocalTemp*
+
+# Excel de origen: contiene datos personales del viaje (reservas, costes, contactos)
+*.xlsx
+*.xlsx - *.csv

@@ -1,0 +1,233 @@
+export const resources = {
+  ca: {
+    translation: {
+      appName: "Japó 2026",
+      nav: { home: "Inici", days: "Dies", reservations: "Reserves", maps: "Mapes" },
+      home: {
+        trip: "Viatge",
+        title: "Japó — Agost 2026",
+        itinerary: "Itinerari",
+      },
+      days: {
+        title: "Dies del viatge",
+        viewAgenda: "Agenda",
+        viewCards: "Targetes",
+        day: "Dia",
+        progress: "{{done}} de {{total}} dies fets",
+        markDone: "Marca com a fet",
+        done: "Fet",
+      },
+      dayDetail: {
+        back: "Dies",
+        notFound: "Dia no trobat.",
+        backToDays: "Tornar als dies",
+        notesHeading: "Les meves notes",
+        notesPlaceholder: "Apunta aquí el que vulguis d'aquest dia…",
+        markDone: "Marca aquest dia com a fet",
+        done: "Dia fet",
+      },
+      reservations: {
+        title: "Reserves i pagaments",
+        totalTrip: "Total viatge (7 persones)",
+        perPerson: "/ persona",
+        open: "Obrir",
+        status: {
+          paid: "Pagat",
+          reserved: "Reservat (resta pagar)",
+          pending: "Pendent",
+          unknown: "—",
+        },
+      },
+      maps: {
+        title: "Mapes",
+        offlineNotice:
+          "Els tiles del mapa es guarden en cache automàticament quan els veus amb connexió. Torna a obrir aquest mapa amb wifi abans del viatge per deixar-lo disponible offline. Els punts vermells són llocs amb coordenades conegudes ({{pinned}} de {{total}}); la resta s'obren directament a Google Maps quan hi ha cobertura.",
+        placesByDay: "Llocs per dia",
+        reservationsGroup: "Reserves",
+        openInMaps: "Maps",
+      },
+      highlights: {
+        sectionTitle: "Curiositats i llegendes",
+        legend: "Llegenda:",
+        curiosity: "Curiositat:",
+        photoPlaceholder: "Espai per a la teva foto",
+      },
+      theme: { light: "Mode clar", dark: "Mode fosc" },
+      language: { label: "Idioma" },
+    },
+  },
+  en: {
+    translation: {
+      appName: "Japan 2026",
+      nav: { home: "Home", days: "Days", reservations: "Bookings", maps: "Maps" },
+      home: {
+        trip: "Trip",
+        title: "Japan — August 2026",
+        itinerary: "Itinerary",
+      },
+      days: {
+        title: "Trip days",
+        viewAgenda: "Agenda",
+        viewCards: "Cards",
+        day: "Day",
+        progress: "{{done}} of {{total}} days done",
+        markDone: "Mark as done",
+        done: "Done",
+      },
+      dayDetail: {
+        back: "Days",
+        notFound: "Day not found.",
+        backToDays: "Back to days",
+        notesHeading: "My notes",
+        notesPlaceholder: "Jot down anything about this day…",
+        markDone: "Mark this day as done",
+        done: "Day done",
+      },
+      reservations: {
+        title: "Bookings & payments",
+        totalTrip: "Total trip (7 people)",
+        perPerson: "/ person",
+        open: "Open",
+        status: {
+          paid: "Paid",
+          reserved: "Booked (payment pending)",
+          pending: "Pending",
+          unknown: "—",
+        },
+      },
+      maps: {
+        title: "Maps",
+        offlineNotice:
+          "Map tiles are cached automatically once you've viewed them online. Open this map on wifi before the trip so it stays available offline. Red pins are places with known coordinates ({{pinned}} of {{total}}); the rest open directly in Google Maps when you have coverage.",
+        placesByDay: "Places by day",
+        reservationsGroup: "Bookings",
+        openInMaps: "Maps",
+      },
+      highlights: {
+        sectionTitle: "Curiosities & legends",
+        legend: "Legend:",
+        curiosity: "Curiosity:",
+        photoPlaceholder: "Space for your own photo",
+      },
+      theme: { light: "Light mode", dark: "Dark mode" },
+      language: { label: "Language" },
+    },
+  },
+  es: {
+    translation: {
+      appName: "Japón 2026",
+      nav: { home: "Inicio", days: "Días", reservations: "Reservas", maps: "Mapas" },
+      home: {
+        trip: "Viaje",
+        title: "Japón — Agosto 2026",
+        itinerary: "Itinerario",
+      },
+      days: {
+        title: "Días del viaje",
+        viewAgenda: "Agenda",
+        viewCards: "Tarjetas",
+        day: "Día",
+        progress: "{{done}} de {{total}} días hechos",
+        markDone: "Marcar como hecho",
+        done: "Hecho",
+      },
+      dayDetail: {
+        back: "Días",
+        notFound: "Día no encontrado.",
+        backToDays: "Volver a los días",
+        notesHeading: "Mis notas",
+        notesPlaceholder: "Apunta aquí lo que quieras de este día…",
+        markDone: "Marcar este día como hecho",
+        done: "Día hecho",
+      },
+      reservations: {
+        title: "Reservas y pagos",
+        totalTrip: "Total viaje (7 personas)",
+        perPerson: "/ persona",
+        open: "Abrir",
+        status: {
+          paid: "Pagado",
+          reserved: "Reservado (falta pagar)",
+          pending: "Pendiente",
+          unknown: "—",
+        },
+      },
+      maps: {
+        title: "Mapas",
+        offlineNotice:
+          "Los tiles del mapa se guardan en caché automáticamente cuando los ves con conexión. Vuelve a abrir este mapa con wifi antes del viaje para dejarlo disponible offline. Los puntos rojos son lugares con coordenadas conocidas ({{pinned}} de {{total}}); el resto se abren directamente en Google Maps cuando hay cobertura.",
+        placesByDay: "Lugares por día",
+        reservationsGroup: "Reservas",
+        openInMaps: "Maps",
+      },
+      highlights: {
+        sectionTitle: "Curiosidades y leyendas",
+        legend: "Leyenda:",
+        curiosity: "Curiosidad:",
+        photoPlaceholder: "Espacio para tu propia foto",
+      },
+      theme: { light: "Modo claro", dark: "Modo oscuro" },
+      language: { label: "Idioma" },
+    },
+  },
+  ja: {
+    translation: {
+      appName: "日本 2026",
+      nav: { home: "ホーム", days: "日程", reservations: "予約", maps: "地図" },
+      home: {
+        trip: "旅行",
+        title: "日本 — 2026年8月",
+        itinerary: "旅程",
+      },
+      days: {
+        title: "旅程一覧",
+        viewAgenda: "リスト",
+        viewCards: "カード",
+        day: "Day",
+        progress: "{{total}}日中{{done}}日完了",
+        markDone: "完了にする",
+        done: "完了",
+      },
+      dayDetail: {
+        back: "日程",
+        notFound: "その日は見つかりません。",
+        backToDays: "日程一覧に戻る",
+        notesHeading: "メモ",
+        notesPlaceholder: "この日についてメモを書く…",
+        markDone: "この日を完了にする",
+        done: "完了済み",
+      },
+      reservations: {
+        title: "予約と支払い",
+        totalTrip: "旅行合計（7名）",
+        perPerson: "/ 1人あたり",
+        open: "開く",
+        status: {
+          paid: "支払い済み",
+          reserved: "予約済み（未払い）",
+          pending: "未定",
+          unknown: "—",
+        },
+      },
+      maps: {
+        title: "地図",
+        offlineNotice:
+          "地図タイルはオンラインで一度表示するだけで自動的にキャッシュされます。旅行前にWi-Fi環境でこの地図を開いておくと、オフラインでも使えるようになります。赤いピンは座標が判明している場所です（{{total}}件中{{pinned}}件）。それ以外は電波があるときにGoogleマップで直接開けます。",
+        placesByDay: "日程ごとの場所",
+        reservationsGroup: "予約",
+        openInMaps: "地図で開く",
+      },
+      highlights: {
+        sectionTitle: "豆知識と伝説",
+        legend: "伝説：",
+        curiosity: "豆知識：",
+        photoPlaceholder: "自分の写真を追加できます",
+      },
+      theme: { light: "ライトモード", dark: "ダークモード" },
+      language: { label: "言語" },
+    },
+  },
+};
+
+export type SupportedLanguage = keyof typeof resources;
+export const SUPPORTED_LANGUAGES: SupportedLanguage[] = ["ca", "en", "es", "ja"];
