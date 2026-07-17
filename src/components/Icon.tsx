@@ -54,6 +54,14 @@ import iconReceiptLong from "@material-symbols/svg-400/outlined/receipt_long.svg
 import iconSmartToy from "@material-symbols/svg-400/outlined/smart_toy.svg?raw";
 import iconSend from "@material-symbols/svg-400/outlined/send.svg?raw";
 import iconFestival from "@material-symbols/svg-400/outlined/festival.svg?raw";
+import iconCalculate from "@material-symbols/svg-400/outlined/calculate.svg?raw";
+import iconSwapHoriz from "@material-symbols/svg-400/outlined/swap_horiz.svg?raw";
+import iconChevronRight from "@material-symbols/svg-400/outlined/chevron_right.svg?raw";
+import iconGroups from "@material-symbols/svg-400/outlined/groups.svg?raw";
+import iconHandshake from "@material-symbols/svg-400/outlined/handshake.svg?raw";
+import iconPhotoCamera from "@material-symbols/svg-400/outlined/photo_camera.svg?raw";
+import iconDownload from "@material-symbols/svg-400/outlined/download.svg?raw";
+import iconBalance from "@material-symbols/svg-400/outlined/balance.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -109,6 +117,14 @@ const ICONS = {
   smart_toy: iconSmartToy,
   send: iconSend,
   festival: iconFestival,
+  calculate: iconCalculate,
+  swap_horiz: iconSwapHoriz,
+  chevron_right: iconChevronRight,
+  groups: iconGroups,
+  handshake: iconHandshake,
+  photo_camera: iconPhotoCamera,
+  download: iconDownload,
+  balance: iconBalance,
 } as const;
 
 export type IconName = keyof typeof ICONS;

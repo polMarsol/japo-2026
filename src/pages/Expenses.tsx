@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import type { TouchEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../lib/auth";
 import { syncEnabled } from "../lib/supabase";
@@ -6,7 +7,10 @@ import { useExpensePool, useExpenses, type ExpenseInput, type ExpenseRow, type C
 import { EXPENSE_CATEGORIES, categoryIcon, type ExpenseCategory } from "../lib/expenseCategories";
 import { TRAVELERS } from "../lib/travelers";
 import { useExchangeRate, toEur, formatAmount } from "../lib/exchangeRate";
-import { Icon } from "../components/Icon";
+import { Icon, type IconName } from "../components/Icon";
+import { BreakdownList } from "../components/BreakdownList";
+import { CurrencyCalculator } from "../components/CurrencyCalculator";
+import { JipiWise } from "../components/JipiWise";
 
 const LAST_CURRENCY_KEY = "japo2026:lastCurrency";
 const DISPLAY_CURRENCY_KEY = "japo2026:displayCurrency";
@@ -128,47 +132,7 @@ function ExpenseForm({
   );
 }
 
-function BreakdownList({
-  title,
-  rows,
-  max,
-  fmt,
-  icons,
-}: {
-  title: string;
-  rows: { key: string; label: string; amount: number }[];
-  max: number;
-  fmt: (eur: number) => string;
-  icons?: boolean;
-}) {
-  if (rows.length === 0) return null;
-  return (
-    <div className="flex flex-col gap-2 rounded-2xl border border-line bg-surface p-3">
-      <h2 className="text-sm font-semibold text-text">{title}</h2>
-      <div className="flex flex-col gap-2">
-        {rows.map((r) => (
-          <div key={r.key} className="flex items-center gap-2">
-            {icons && (
-              <Icon name={categoryIcon(r.key)} className="h-4 w-4 shrink-0 text-accent" />
-            )}
-            <span className="w-20 shrink-0 truncate text-xs text-text">{r.label}</span>
-            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-chip">
-              <div
-                className="h-full rounded-full bg-accent"
-                style={{ width: `${max > 0 ? (r.amount / max) * 100 : 0}%` }}
-              />
-            </div>
-            <span className="w-16 shrink-0 text-right text-xs text-muted">
-              {fmt(r.amount)}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export function Expenses() {
+function ExpensePoolPanel() {
   const { t, i18n } = useTranslation();
   const { isAdmin } = useAuth();
   const { total, setTotal } = useExpensePool();
@@ -447,6 +411,80 @@ export function Expenses() {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+const PANELS: { key: "calculator" | "pool" | "jipiwise"; icon: IconName }[] = [
+  { key: "calculator", icon: "calculate" },
+  { key: "pool", icon: "account_balance_wallet" },
+  { key: "jipiwise", icon: "groups" },
+];
+const SWIPE_THRESHOLD = 50;
+
+export function Expenses() {
+  const { t } = useTranslation();
+  const [panel, setPanel] = useState(1);
+  const touchStartX = useRef<number | null>(null);
+  const touchDeltaX = useRef(0);
+
+  function onTouchStart(e: TouchEvent) {
+    touchStartX.current = e.touches[0].clientX;
+    touchDeltaX.current = 0;
+  }
+  function onTouchMove(e: TouchEvent) {
+    if (touchStartX.current === null) return;
+    touchDeltaX.current = e.touches[0].clientX - touchStartX.current;
+  }
+  function onTouchEnd() {
+    if (touchDeltaX.current > SWIPE_THRESHOLD) {
+      setPanel((p) => Math.max(0, p - 1));
+    } else if (touchDeltaX.current < -SWIPE_THRESHOLD) {
+      setPanel((p) => Math.min(PANELS.length - 1, p + 1));
+    }
+    touchStartX.current = null;
+    touchDeltaX.current = 0;
+  }
+
+  return (
+    <div className="flex flex-col">
+      <div className="flex items-center justify-center gap-1.5 border-b border-line bg-surface-2/60 px-4 py-2">
+        {PANELS.map((p, i) => (
+          <button
+            key={p.key}
+            type="button"
+            onClick={() => setPanel(i)}
+            className={`flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-medium ${
+              panel === i ? "bg-accent text-white" : "bg-chip text-chip-text"
+            }`}
+          >
+            <Icon name={p.icon} className="h-3.5 w-3.5" />
+            {t(`expenses.tabs.${p.key}`)}
+          </button>
+        ))}
+      </div>
+
+      <div
+        className="overflow-hidden"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
+        <div
+          className="flex items-start transition-transform duration-300 ease-out"
+          style={{ transform: `translateX(-${panel * 100}%)` }}
+        >
+          <div className="w-full shrink-0">
+            <CurrencyCalculator />
+          </div>
+          <div className="w-full shrink-0">
+            <ExpensePoolPanel />
+          </div>
+          <div className="w-full shrink-0">
+            <JipiWise />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
