@@ -210,6 +210,23 @@ export function Reserves() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [creating, setCreating] = useState(false);
 
+  let paidSum = 0;
+  let paidCount = 0;
+  let pendingSum = 0;
+  let pendingCount = 0;
+  for (const item of items) {
+    if (item.costTotal === null || item.costTotal === undefined) continue;
+    const cost = typeof item.costTotal === "number" ? item.costTotal : Number(item.costTotal);
+    if (!Number.isFinite(cost)) continue;
+    if (item.statusKey === "paid") {
+      paidSum += cost;
+      paidCount++;
+    } else {
+      pendingSum += cost;
+      pendingCount++;
+    }
+  }
+
   function parseNum(v: string): number | null {
     const n = Number(v.replace(",", "."));
     return v.trim() === "" || !Number.isFinite(n) ? null : n;
@@ -235,11 +252,29 @@ export function Reserves() {
 
       {total && (
         <div className="rounded-2xl border border-line bg-surface p-4">
-          <p className="text-sm text-muted">{t("reservations.totalTrip")}</p>
-          <p className="text-2xl font-semibold text-text">
-            {formatCost(total.costTotal)}
-          </p>
-          <p className="text-sm text-muted">
+          <div className="grid grid-cols-3 gap-2 text-center">
+            <div className="flex flex-col">
+              <span className="text-lg font-semibold text-text">{formatCost(total.costTotal)}</span>
+              <span className="text-[11px] text-muted">{t("reservations.totalTrip")}</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-lg font-semibold text-green-600 dark:text-green-400">
+                {formatCost(paidSum)}
+              </span>
+              <span className="text-[11px] text-muted">
+                {t("reservations.paidLabel")} · {t("reservations.itemsCount", { count: paidCount })}
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-lg font-semibold text-pink-600 dark:text-pink-400">
+                {formatCost(pendingSum)}
+              </span>
+              <span className="text-[11px] text-muted">
+                {t("reservations.pendingLabel")} · {t("reservations.itemsCount", { count: pendingCount })}
+              </span>
+            </div>
+          </div>
+          <p className="mt-2 text-center text-xs text-muted">
             {formatCost(total.costPerPerson)} {t("reservations.perPerson")}
           </p>
         </div>

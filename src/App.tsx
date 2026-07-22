@@ -8,6 +8,7 @@ import { Days } from "./pages/Days";
 import { DayDetail } from "./pages/DayDetail";
 import { Reserves } from "./pages/Reserves";
 import { Expenses } from "./pages/Expenses";
+import { Equipatge } from "./pages/Equipatge";
 import { ChatBot } from "./components/ChatBot";
 import { useAuth } from "./lib/auth";
 
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/dies/:day" element={<DayDetail />} />
           <Route path="/reserves" element={<Reserves />} />
           <Route path="/gastos" element={<Expenses />} />
+          <Route path="/equipatge" element={<Equipatge />} />
           <Route
             path="/mapes"
             element={

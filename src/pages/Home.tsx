@@ -7,6 +7,7 @@ import { useAuth } from "../lib/auth";
 import { getDayHeroPhoto, photoUrl } from "../lib/photos";
 import { Icon, type IconName } from "../components/Icon";
 import { SUPPORTED_LANGUAGES } from "../i18n/resources";
+import { PACKING_ITEMS } from "../lib/packingItems";
 
 const LANGUAGE_LABELS: Record<string, string> = { ca: "CA", en: "EN", es: "ES", ja: "JA" };
 
@@ -112,24 +113,31 @@ export function Home() {
           sublabel={`${db.reservations.items.length}`}
         />
         <NavTile to="/mapes" icon="map" label={t("nav.maps")} sublabel="OSM" />
-        <div className="flex flex-col justify-between rounded-2xl border border-line bg-surface p-3">
-          <span className="text-sm font-semibold text-text">{t("language.label")}</span>
-          <div className="flex flex-wrap gap-1">
-            {SUPPORTED_LANGUAGES.map((lng) => (
-              <button
-                key={lng}
-                type="button"
-                onClick={() => i18n.changeLanguage(lng)}
-                className={`rounded-full px-2 py-1 text-xs font-medium ${
-                  i18n.language === lng
-                    ? "bg-accent-soft text-accent"
-                    : "bg-chip text-chip-text"
-                }`}
-              >
-                {LANGUAGE_LABELS[lng]}
-              </button>
-            ))}
-          </div>
+        <NavTile
+          to="/equipatge"
+          icon="checklist"
+          label={t("nav.packing")}
+          sublabel={`${PACKING_ITEMS.length} items`}
+        />
+      </div>
+
+      <div className="flex flex-col justify-between gap-2 rounded-2xl border border-line bg-surface p-3">
+        <span className="text-sm font-semibold text-text">{t("language.label")}</span>
+        <div className="flex flex-wrap gap-1">
+          {SUPPORTED_LANGUAGES.map((lng) => (
+            <button
+              key={lng}
+              type="button"
+              onClick={() => i18n.changeLanguage(lng)}
+              className={`rounded-full px-2 py-1 text-xs font-medium ${
+                i18n.language === lng
+                  ? "bg-accent-soft text-accent"
+                  : "bg-chip text-chip-text"
+              }`}
+            >
+              {LANGUAGE_LABELS[lng]}
+            </button>
+          ))}
         </div>
       </div>
 

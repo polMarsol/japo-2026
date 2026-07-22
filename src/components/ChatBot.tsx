@@ -5,6 +5,9 @@ import { getDay, useLocalizedDb } from "../lib/db";
 import { flattenWithPaths, regroupTree } from "../lib/outline";
 import { askGuide, type ChatMessage } from "../lib/chat";
 import { syncEnabled } from "../lib/supabase";
+import { usePackingChecks } from "../lib/packingSync";
+import { PACKING_ITEMS } from "../lib/packingItems";
+import { TRAVELERS } from "../lib/travelers";
 import { Icon } from "./Icon";
 
 const MAX_CONTEXT_CHARS = 3000;
@@ -22,15 +25,30 @@ export function ChatBot() {
 
   const dayMatch = location.pathname.match(/\/dies\/(\d+)/);
   const day = dayMatch?.[1];
+  const onPackingPage = location.pathname === "/equipatge";
+  const { rows: packingRows } = usePackingChecks();
+
+  const packingContext = useMemo(() => {
+    const totalPossible = PACKING_ITEMS.length * TRAVELERS.length;
+    const totalChecked = Object.keys(packingRows).length;
+    const summary = `Equipatge: ${totalChecked}/${totalPossible} marcats entre els ${TRAVELERS.length} viatgers.`;
+    if (!onPackingPage) return summary;
+    const list = PACKING_ITEMS.map((i) => t(`packing.items.${i.id}`)).join(", ");
+    return `${summary}\nLlista completa d'equipatge: ${list}`;
+  }, [packingRows, onPackingPage, t]);
 
   const context = useMemo(() => {
-    if (!day) return undefined;
-    const outline = getDay(db, day);
-    if (!outline) return undefined;
-    const flat = flattenWithPaths(regroupTree(outline.sections));
-    const text = `${outline.title ?? ""}\n${flat.map((n) => n.text).join("\n")}`;
-    return text.slice(0, MAX_CONTEXT_CHARS);
-  }, [db, day]);
+    const parts: string[] = [];
+    if (day) {
+      const outline = getDay(db, day);
+      if (outline) {
+        const flat = flattenWithPaths(regroupTree(outline.sections));
+        parts.push(`${outline.title ?? ""}\n${flat.map((n) => n.text).join("\n")}`);
+      }
+    }
+    parts.push(packingContext);
+    return parts.join("\n\n").slice(0, MAX_CONTEXT_CHARS);
+  }, [db, day, packingContext]);
 
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
@@ -90,6 +108,11 @@ export function ChatBot() {
             {day && (
               <p className="border-b border-line bg-accent-soft px-4 py-1.5 text-[11px] text-accent">
                 {t("chat.dayContext", { day })}
+              </p>
+            )}
+            {onPackingPage && (
+              <p className="border-b border-line bg-accent-soft px-4 py-1.5 text-[11px] text-accent">
+                {t("chat.packingContext")}
               </p>
             )}
 

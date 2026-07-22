@@ -10,3 +10,5 @@ Users*AppDataLocalTemp*
 # Excel de origen: contiene datos personales del viaje (reservas, costes, contactos)
 *.xlsx
 *.xlsx - *.csv
+
+manual/

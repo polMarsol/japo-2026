@@ -61,7 +61,10 @@ export default defineConfig({
             options: {
               cacheName: 'osm-tiles',
               expiration: {
-                maxEntries: 500,
+                // Subido de 500 a 6000 para que la descarga deliberada de
+                // mapas offline (ver src/lib/offlineTiles.ts) no expulse
+                // tiles ya descargados de otros dias por LRU.
+                maxEntries: 6000,
                 maxAgeSeconds: 60 * 60 * 24 * 60,
               },
             },
