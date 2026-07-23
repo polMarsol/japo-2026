@@ -1117,7 +1117,7 @@
             {
               "text": "Route",
               "children": [],
-              "link": "https://www.google.es/maps/dir/Nissan+Rent-a-car,+3+Chome-11-18+Higashihie,+Hakata+Ward,+Fukuoka,+812-0007,+Jap%C3%B3n/TRIGON+HOTEL,+Jap%C3%B3n,+%E3%80%92812-0018+Fukuoka,+Hakata+Ward,+Sumiyoshi,+4+Chome%E2%88%9222%E2%88%927/@33.5805776,130.4116888,1252m/"
+              "link": "https://maps.app.goo.gl/4PeuqAHYkeCgUUhd8"
             }
           ]
         },
@@ -1608,6 +1608,26 @@
         {
           "text": "This is the level of detail I'll follow for the following days. I'll also keep adding any observations and inconsistencies I spot, so you can decide whether to adjust the itinerary before you leave.",
           "children": []
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "Fukuoka Airport → Nissan Rent-a-car (Higashihie)",
+              "link": "https://maps.app.goo.gl/v2RM5zAMvbLS9hmv8",
+              "children": []
+            },
+            {
+              "text": "Sakurai Futamigaura → TRIGON Hotel",
+              "link": "https://maps.app.goo.gl/GppiWSyrDdRiYdFi8",
+              "children": []
+            },
+            {
+              "text": "TRIGON Hotel → Sakurai Futamigaura",
+              "link": "https://maps.app.goo.gl/MTreenxedYeX24wi9",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -2400,6 +2420,36 @@
         {
           "text": "This is a day with quite a few kilometers, but a well-balanced one. The one thing I'd still reconsider before the trip is whether it's worth going inside Kumamoto Castle or just seeing it from the outside. If you decide to skip the interior, you'll save about an hour and can reach Takachiho with more time to rest or take an early stroll before dinner. This is a decision that can set the pace for the following days.",
           "children": []
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "TRIGON Hotel → Tochoji Temple",
+              "link": "https://maps.app.goo.gl/nGYRRi19AaiWXVJR6",
+              "children": []
+            },
+            {
+              "text": "Tochoji Temple → Oshiromae Parking Lot (Kumamoto Castle)",
+              "link": "https://maps.app.goo.gl/r4u2bcrU3MqMgQ75A",
+              "children": []
+            },
+            {
+              "text": "Oshiromae Parking Lot → Reigando Cave",
+              "link": "https://maps.app.goo.gl/MgNVKUfijuiMRHVW7",
+              "children": []
+            },
+            {
+              "text": "Reigando Cave → Kamishikimi Kumanoza Shrine",
+              "link": "https://maps.app.goo.gl/BZoFMN5hd8jZ4Gbr8",
+              "children": []
+            },
+            {
+              "text": "Kamishikimi Kumanoza Shrine → Alberg Takachiho Sanso Amaterasu Kagura",
+              "link": "https://maps.app.goo.gl/HwyScGQq1Yub696P7",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -4248,6 +4298,35 @@
               "children": []
             }
           ]
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "Alberg Takachiho Sanso → Takachiho Gorge",
+              "link": "https://maps.app.goo.gl/4N4ZCiNjRrbg5RpKA",
+              "children": []
+            },
+            {
+              "text": "Takachiho Gorge → Takachiho Shrine",
+              "link": "https://maps.app.goo.gl/5DURwrAjZagToyJa7",
+              "children": []
+            },
+            {
+              "text": "Takachiho Shrine → Ama-no-Iwato Shrine (West Main Shrine)",
+              "link": "https://maps.app.goo.gl/X4A6QmvTTLQuZNfY8",
+              "children": []
+            },
+            {
+              "text": "Odonokuchi rice paddies: exact address not found; likely reached back via the road to the hostel.",
+              "children": []
+            },
+            {
+              "text": "Ama-no-Iwato Shrine (arrossars Odonokuchi) → Alberg Takachiho Sanso",
+              "link": "https://maps.app.goo.gl/k7zuePQGdrcQXttCA",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -4854,6 +4933,26 @@
         {
           "text": "This is a day to arrive in Okinawa with energy, not to try to see half the island. With arrival at 12.50 h, check-in, and the accumulated tiredness from previous days, spending the afternoon strolling around Kokusai-dori and central Naha is a much more balanced option. I'd leave the visits that require a car (Shuri, the beaches, or the Naval Headquarters) for the following days, when you can enjoy them more calmly and with less travel.",
           "children": []
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "Alberg Takachiho Sanso → Kumamoto Airport",
+              "link": "https://maps.app.goo.gl/xXPc852d7yRZdeKD8",
+              "children": []
+            },
+            {
+              "text": "Kumamoto Airport → Lloguer cotxe (1802-2 Oyatsu)",
+              "link": "https://maps.app.goo.gl/MhfFPPa9a6Gv74Gg8",
+              "children": []
+            },
+            {
+              "text": "Naha Airport → Condominium Hotel Riyuka in Kume",
+              "link": "https://maps.app.goo.gl/BZN2pG6dgRgYoZ1J8",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -10556,6 +10655,20 @@
               "children": []
             }
           ]
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "Osaka Station → Lloguer de cotxe",
+              "link": "https://maps.app.goo.gl/Nig4LAfuwtA5awbP9",
+              "children": []
+            },
+            {
+              "text": "Pep and Susana sleep at the temple (Koyasan Shukubo Sainanin-in).",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -11331,6 +11444,36 @@
               "children": []
             }
           ]
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "Koyasan Shukubo Sainanin-in → Kumano Kodo - Nakahechi Daimon-zaka",
+              "link": "https://maps.app.goo.gl/oKDXecrkRbiPy4jj7",
+              "children": []
+            },
+            {
+              "text": "Kumano Kodo - Daimon-zaka → Kumano Nachi Taisha",
+              "link": "https://maps.app.goo.gl/FkeJL3BxLtLxnB5HA",
+              "children": []
+            },
+            {
+              "text": "Kumano Nachi Taisha → Seiganto-ji",
+              "link": "https://maps.app.goo.gl/AS44dk4SBEdjwaGi7",
+              "children": []
+            },
+            {
+              "text": "Seiganto-ji → Cascada de Nachi",
+              "link": "https://maps.app.goo.gl/vD7EiC8SGhzBHFCRA",
+              "children": []
+            },
+            {
+              "text": "Cascada de Nachi → Hotel Wisterian Life Club Toba",
+              "link": "https://maps.app.goo.gl/4RGyeq7oL7PWn5Pa7",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -11397,7 +11540,7 @@
             {
               "text": "Cotxe de lloguer",
               "children": [],
-              "link": "https://maps.app.goo.gl/3xNyzA5RNF5AjVjs7"
+              "link": "https://www.google.com/maps/place/ORIX+Rent-a-car+Kyoto-ekimae+Shinkansen-guchi/@34.9840504,135.7535764,435m/data=!3m1!1e3!4m14!1m7!3m6!1s0x600108a972d65c63:0x37490c88da64cc89!2sORIX+Rent-a-car+Kyoto-ekimae+Shinkansen-guchi!8m2!3d34.9839647!4d135.7548746!16s%2Fg%2F1tdm_dd5!3m5!1s0x600108a972d65c63:0x37490c88da64cc89!8m2!3d34.9839647!4d135.7548746!16s%2Fg%2F1tdm_dd5?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
             },
             {
               "text": "Metro",
@@ -12148,6 +12291,21 @@
           "children": [
             {
               "text": "JAPÓ 2026",
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "Hotel Wisterian Life Club Toba → ORIX Rent-a-car Kyoto-ekimae Shinkansen-guchi",
+              "link": "https://maps.app.goo.gl/VTdefwWLzM1nGAq29",
+              "children": []
+            },
+            {
+              "text": "ORIX Rent-a-car Kyoto-ekimae Shinkansen-guchi → UU Inn Kyoto",
+              "link": "https://maps.app.goo.gl/WaBWmkgjVEvTcgGo9",
               "children": []
             }
           ]
@@ -14690,6 +14848,26 @@
               "children": []
             }
           ]
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "UU Inn Kyoto → Toyota Rent-a-car (Kyoto Shinkansen-guchi)",
+              "link": "https://maps.app.goo.gl/xj6tyMvuxFFHwYTw9",
+              "children": []
+            },
+            {
+              "text": "Lloguer de cotxe → Mina's LanternHouse (Takayama)",
+              "link": "https://maps.app.goo.gl/AUDxToq18rmcwfUH6",
+              "children": []
+            },
+            {
+              "text": "Mina's LanternHouse → Sanmachi Suji (Takayama)",
+              "link": "https://maps.app.goo.gl/yQ9t4rxRJFURhigt5",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -15490,6 +15668,26 @@
             },
             {
               "text": "JAPÓ 2026",
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "Mina's LanternHouse (Takayama) → AB Hotel Nakatsugawa",
+              "link": "https://maps.app.goo.gl/wKzmvwwvKWRVnLg38",
+              "children": []
+            },
+            {
+              "text": "AB Hotel Nakatsugawa → Tsumago-juku",
+              "link": "https://maps.app.goo.gl/acGdHaZo43D3uc4TA",
+              "children": []
+            },
+            {
+              "text": "Tsumago-juku → AB Hotel Nakatsugawa",
+              "link": "https://maps.app.goo.gl/JFGf9Q4ESocpsrCR6",
               "children": []
             }
           ]
@@ -16419,6 +16617,26 @@
           "children": [
             {
               "text": "JAPÓ 2026",
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "Route updates",
+          "children": [
+            {
+              "text": "AB Hotel Nakatsugawa → Llac Kawaguchi (opcio si hi ha bona visibilitat)",
+              "link": "https://maps.app.goo.gl/2cHrApV5zPpbMaqc9",
+              "children": []
+            },
+            {
+              "text": "Mount Takao → Toyota Rent-a-car Hachioji Ekimae",
+              "link": "https://maps.app.goo.gl/k2AjzTeLQ852u8X5A",
+              "children": []
+            },
+            {
+              "text": "Toyota Rent-a-car Hachioji Ekimae → Hotel Hana Asakusa 2 (Tokyo)",
+              "link": "https://maps.app.goo.gl/cHBWBb7WFKGVYtqc8",
               "children": []
             }
           ]
