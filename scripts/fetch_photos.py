@@ -70,6 +70,8 @@ PLACES: dict[str, list[str]] = {
     "Senso-ji (Asakusa)": ["Sensō-ji"],
     "Shibuya Crossing": ["Shibuya Crossing"],
     "Mercat de Toyosu": ["Toyosu Market"],
+    "Naha (Kokusai-dori)": ["Naha"],
+    "Kansai International Airport": ["Kansai International Airport"],
     "teamLab Planets": ["teamLab Planets", "teamLab Borderless", "teamLab"],
 }
 

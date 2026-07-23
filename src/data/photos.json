@@ -178,5 +178,17 @@
     "credit": "Mr.choppers",
     "license": "CC BY-SA 3.0",
     "sourceTitle": "Honda Step WGN"
+  },
+  "Naha (Kokusai-dori)": {
+    "file": "images/places/naha-kokusai-dori.jpg",
+    "credit": "663highland\nnnh\nComposition by Kyoww",
+    "license": "CC BY-SA 3.0",
+    "sourceTitle": "Naha"
+  },
+  "Kansai International Airport": {
+    "file": "images/places/kansai-international-airport.jpg",
+    "credit": "Ankou1192",
+    "license": "CC BY-SA 4.0",
+    "sourceTitle": "Kansai International Airport"
   }
 }

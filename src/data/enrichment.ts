@@ -58,6 +58,16 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
           "Takachiho és famós per la Yokagura, un cicle de 33 danses sagrades que representen el mite d'Amaterasu. Als hotels de la zona sovint s'ofereix una versió resumida per a visitants.",
       },
     ],
+    "4": [
+      {
+        place: "Naha (Kokusai-dori)",
+        curiosity:
+          "Aquest carrer d'1,6 km es coneix com la «Milla Miraculosa» perquè es va reconstruir gairebé del no-res després de quedar completament arrasat a la Batalla d'Okinawa (1945), convertint-se en pocs anys en el cor comercial de Naha.",
+        tips: [
+          "Els carrerons laterals (Heiwa-dori, Ichiba Hon-dori) amaguen el mercat cobert i els bars més autèntics, allunyats de les botigues de souvenirs de l'avinguda principal.",
+        ],
+      },
+    ],
     "5": [
       {
         place: "Kerama Shotō (illes Kerama)",
@@ -77,6 +87,13 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
         place: "Castell de Shuri",
         legend:
           "Va ser la seu del Regne de Ryūkyū durant més de 400 anys, un regne independent que feia de pont comercial entre Xina, Japó i el sud-est asiàtic. Destruït diverses vegades — inclosa la Batalla d'Okinawa (1945) i un incendi el 2019 —, es va reconstruint seguint tècniques tradicionals.",
+      },
+    ],
+    "7": [
+      {
+        place: "Kansai International Airport",
+        curiosity:
+          "Es va construir sobre una illa artificial a la badia d'Osaka i el va dissenyar l'arquitecte Renzo Piano. És famós tant per la seva terminal d'un sol edifici (llavors la més llarga del món) com pel fet que, des que va obrir el 1994, s'ha anat enfonsant lentament al mar.",
       },
     ],
     "8": [
@@ -270,6 +287,16 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
           "Takachiho is famous for Yokagura, a cycle of 33 sacred dances retelling the myth of Amaterasu. Local inns often offer a shortened version for visitors.",
       },
     ],
+    "4": [
+      {
+        place: "Naha (Kokusai-dori)",
+        curiosity:
+          "This 1.6 km street is nicknamed the 'Miracle Mile' because it was rebuilt almost from scratch after being completely flattened in the Battle of Okinawa (1945), becoming Naha's commercial heart within just a few years.",
+        tips: [
+          "The side alleys (Heiwa-dori, Ichiba Hon-dori) hide the covered market and the most authentic bars, away from the souvenir shops on the main avenue.",
+        ],
+      },
+    ],
     "5": [
       {
         place: "Kerama Shotō (Kerama Islands)",
@@ -289,6 +316,13 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
         place: "Shuri Castle",
         legend:
           "It was the seat of the Ryūkyū Kingdom for over 400 years, an independent kingdom that acted as a trade bridge between China, Japan and Southeast Asia. Destroyed several times — including the Battle of Okinawa (1945) and a 2019 fire — it keeps being rebuilt using traditional techniques.",
+      },
+    ],
+    "7": [
+      {
+        place: "Kansai International Airport",
+        curiosity:
+          "Built on an artificial island in Osaka Bay and designed by architect Renzo Piano, it's famous both for its single-building terminal (the longest in the world when it opened) and for the fact that it has been slowly sinking into the sea since it opened in 1994.",
       },
     ],
     "8": [
@@ -482,6 +516,16 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
           "Takachiho es famoso por la Yokagura, un ciclo de 33 danzas sagradas que representan el mito de Amaterasu. En los hoteles de la zona suele ofrecerse una versión resumida para visitantes.",
       },
     ],
+    "4": [
+      {
+        place: "Naha (Kokusai-dori)",
+        curiosity:
+          "Esta calle de 1,6 km se conoce como la «Milla Milagrosa» porque se reconstruyó casi de la nada tras quedar completamente arrasada en la Batalla de Okinawa (1945), convirtiéndose en pocos años en el corazón comercial de Naha.",
+        tips: [
+          "Los callejones laterales (Heiwa-dori, Ichiba Hon-dori) esconden el mercado cubierto y los bares más auténticos, lejos de las tiendas de souvenirs de la avenida principal.",
+        ],
+      },
+    ],
     "5": [
       {
         place: "Kerama Shotō (islas Kerama)",
@@ -501,6 +545,13 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
         place: "Castillo de Shuri",
         legend:
           "Fue la sede del Reino de Ryūkyū durante más de 400 años, un reino independiente que hacía de puente comercial entre China, Japón y el sudeste asiático. Destruido varias veces —incluida la Batalla de Okinawa (1945) y un incendio en 2019—, se sigue reconstruyendo con técnicas tradicionales.",
+      },
+    ],
+    "7": [
+      {
+        place: "Kansai International Airport",
+        curiosity:
+          "Se construyó sobre una isla artificial en la bahía de Osaka y lo diseñó el arquitecto Renzo Piano. Es famoso tanto por su terminal de un solo edificio (la más larga del mundo cuando abrió) como por el hecho de que, desde que abrió en 1994, se ha ido hundiendo lentamente en el mar.",
       },
     ],
     "8": [
@@ -694,6 +745,14 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
           "高千穂はアマテラスの神話を描いた33番からなる夜神楽で知られる。周辺の宿では観光客向けに短縮版が上演されることが多い。",
       },
     ],
+    "4": [
+      {
+        place: "Naha (Kokusai-dori)",
+        curiosity:
+          "全長1.6kmのこの通りは、1945年の沖縄戦でほぼ完全に破壊された後、驚くほど短期間で再建されたことから「奇跡の1マイル」と呼ばれ、数年のうちに那覇の商業の中心地となった。",
+        tips: ["脇道（平和通り、市場本通り）には市場やより地元らしい飲食店があり、大通りの土産物店とは違う雰囲気が楽しめる。"],
+      },
+    ],
     "5": [
       {
         place: "慶良間諸島",
@@ -713,6 +772,13 @@ export const enrichment: Record<"ca" | "en" | "es" | "ja", EnrichmentByDay> = {
         place: "首里城",
         legend:
           "400年以上にわたり琉球王国の王城であり、中国・日本・東南アジアを結ぶ貿易の拠点だった独立王国の中心地。沖縄戦（1945年）や2019年の火災など何度も焼失しているが、そのたびに伝統的な技法で再建されてきた。",
+      },
+    ],
+    "7": [
+      {
+        place: "Kansai International Airport",
+        curiosity:
+          "大阪湾の人工島に建設され、建築家レンゾ・ピアノが設計した。開港時は世界最長だった単一構造のターミナルビルで知られる一方、1994年の開港以来ゆっくりと海に沈み続けていることでも有名。",
       },
     ],
     "8": [
