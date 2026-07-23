@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLocalizedDb } from "../lib/db";
@@ -6,8 +7,11 @@ import { useTheme } from "../lib/theme";
 import { useAuth } from "../lib/auth";
 import { getDayHeroPhoto, photoUrl } from "../lib/photos";
 import { Icon, type IconName } from "../components/Icon";
+import { BackpackGauge } from "../components/BackpackGauge";
 import { SUPPORTED_LANGUAGES } from "../i18n/resources";
 import { PACKING_ITEMS } from "../lib/packingItems";
+import { TRAVELERS } from "../lib/travelers";
+import { usePackingChecks } from "../lib/packingSync";
 
 const LANGUAGE_LABELS: Record<string, string> = { ca: "CA", en: "EN", es: "ES", ja: "JA" };
 
@@ -17,13 +21,16 @@ function NavTile({
   label,
   sublabel,
   photo,
+  visual,
 }: {
   to: string;
   icon: IconName;
   label: string;
   sublabel: string;
   photo?: string;
+  visual?: ReactNode;
 }) {
+  const filled = Boolean(photo) || Boolean(visual);
   return (
     <Link
       to={to}
@@ -34,18 +41,23 @@ function NavTile({
           <img src={photo} alt="" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
         </>
+      ) : visual ? (
+        <>
+          {visual}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent" />
+        </>
       ) : (
         <Icon name={icon} className="absolute right-3 top-3 h-6 w-6 text-accent" />
       )}
       <span
         className={`relative z-10 flex items-center gap-1.5 text-sm font-semibold ${
-          photo ? "text-white" : "text-text"
+          filled ? "text-white" : "text-text"
         }`}
       >
-        {photo && <Icon name={icon} className="h-4 w-4" />}
+        {filled && <Icon name={icon} className="h-4 w-4" />}
         {label}
       </span>
-      <span className={`relative z-10 text-xs ${photo ? "text-white/70" : "text-muted"}`}>
+      <span className={`relative z-10 text-xs ${filled ? "text-white/70" : "text-muted"}`}>
         {sublabel}
       </span>
     </Link>
@@ -62,6 +74,13 @@ export function Home() {
   const { count } = useDayProgress();
   const progressPct = totalDays ? Math.round((count / totalDays) * 100) : 0;
   const heroPhoto = getDayHeroPhoto(i18n.language, "1");
+
+  const { rows: packingRows } = usePackingChecks();
+  const packingByPerson = TRAVELERS.map((p) => {
+    const checked = PACKING_ITEMS.filter((i) => Boolean(packingRows[`${p}:${i.id}`])).length;
+    return { person: p, checked, progress: PACKING_ITEMS.length ? checked / PACKING_ITEMS.length : 0 };
+  });
+  const packingCompleteCount = packingByPerson.filter((p) => p.checked === PACKING_ITEMS.length).length;
 
   return (
     <div className="flex flex-col gap-6 p-4 pb-8">
@@ -117,7 +136,30 @@ export function Home() {
           to="/equipatge"
           icon="checklist"
           label={t("nav.packing")}
-          sublabel={`${PACKING_ITEMS.length} items`}
+          sublabel={t("packing.travelersComplete", { done: packingCompleteCount, total: TRAVELERS.length })}
+          visual={
+            <>
+              <div className="absolute inset-0 bg-accent-soft" />
+              <div className="absolute inset-0 flex flex-wrap content-center items-center justify-center gap-1.5 p-3 pb-9">
+                {packingByPerson.map(({ person, progress, checked }) => {
+                  const complete = checked === PACKING_ITEMS.length;
+                  return (
+                    <div key={person} className="relative h-7 w-7" title={person}>
+                      <BackpackGauge
+                        progress={progress}
+                        className="h-full w-full"
+                        fillClassName={complete ? "text-yellow-400" : "text-accent"}
+                        emptyClassName="text-white/25"
+                      />
+                      {complete && (
+                        <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-yellow-400" />
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          }
         />
       </div>
 

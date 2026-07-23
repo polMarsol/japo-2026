@@ -106,6 +106,20 @@ export const resources = {
           "eki-stamp-notebook": "Llibreta per als segells Eki Stamp",
           "coin-purse": "Moneder per a monedes de ien",
         },
+        travelersComplete: "{{done}}/{{total}} motxilles completes",
+        luckyWord: {
+          title: "Motxilla completa!",
+          subtitle: "La teva paraula de sort per al viatge:",
+        },
+        luckyWordMeanings: {
+          Pol: "deessa del sol, la divinitat suprema",
+          Marc: "déu de la tempesta i protector dels viatgers",
+          Pep: "déu creador, pare dels kami",
+          Nuri: "deessa creadora, mare dels kami",
+          Amaya: "déu de l'arròs i la prosperitat",
+          "Míriam": "déu protector dels viatgers i guerrers",
+          Susana: "deessa de la fortuna, les arts i l'aigua",
+        },
       },
       highlights: {
         sectionTitle: "Curiositats i llegendes",
@@ -328,6 +342,20 @@ export const resources = {
           "trash-bags": "Small trash bags",
           "eki-stamp-notebook": "Notebook for Eki Stamp collecting",
           "coin-purse": "Coin purse for yen",
+        },
+        travelersComplete: "{{done}}/{{total}} backpacks complete",
+        luckyWord: {
+          title: "Backpack complete!",
+          subtitle: "Your lucky word for the trip:",
+        },
+        luckyWordMeanings: {
+          Pol: "sun goddess, the supreme deity",
+          Marc: "storm god, protector of travelers",
+          Pep: "creator god, father of the kami",
+          Nuri: "creator goddess, mother of the kami",
+          Amaya: "god of rice and prosperity",
+          "Míriam": "guardian god of travelers and warriors",
+          Susana: "goddess of fortune, arts and water",
         },
       },
       highlights: {
@@ -552,6 +580,20 @@ export const resources = {
           "eki-stamp-notebook": "Libreta para los sellos Eki Stamp",
           "coin-purse": "Monedero para monedas de yen",
         },
+        travelersComplete: "{{done}}/{{total}} mochilas completas",
+        luckyWord: {
+          title: "¡Mochila completa!",
+          subtitle: "Tu palabra de la suerte para el viaje:",
+        },
+        luckyWordMeanings: {
+          Pol: "diosa del sol, la divinidad suprema",
+          Marc: "dios de la tormenta y protector de viajeros",
+          Pep: "dios creador, padre de los kami",
+          Nuri: "diosa creadora, madre de los kami",
+          Amaya: "dios del arroz y la prosperidad",
+          "Míriam": "dios protector de viajeros y guerreros",
+          Susana: "diosa de la fortuna, las artes y el agua",
+        },
       },
       highlights: {
         sectionTitle: "Curiosidades y leyendas",
@@ -774,6 +816,20 @@ export const resources = {
           "trash-bags": "小さいゴミ袋",
           "eki-stamp-notebook": "駅スタンプ用ノート",
           "coin-purse": "円硬貨用の小銭入れ",
+        },
+        travelersComplete: "{{done}}/{{total}} 個完成",
+        luckyWord: {
+          title: "リュック完成！",
+          subtitle: "あなたの旅の縁起言葉：",
+        },
+        luckyWordMeanings: {
+          Pol: "太陽の女神、最高神",
+          Marc: "嵐の神、旅人の守護神",
+          Pep: "創造の神、神々の父",
+          Nuri: "創造の女神、神々の母",
+          Amaya: "五穀豊穣の神",
+          "Míriam": "旅人と武人の守護神",
+          Susana: "福徳と芸能・水の女神",
         },
       },
       highlights: {

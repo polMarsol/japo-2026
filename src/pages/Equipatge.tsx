@@ -5,6 +5,7 @@ import { PACKING_ITEMS, PACKING_CATEGORIES } from "../lib/packingItems";
 import { usePackingChecks } from "../lib/packingSync";
 import { syncEnabled } from "../lib/supabase";
 import { Icon } from "../components/Icon";
+import { LUCKY_WORDS } from "../lib/luckyWords";
 
 const LAST_PERSON_KEY = "japo2026:packingPerson";
 
@@ -79,6 +80,19 @@ export function Equipatge() {
           />
         </div>
       </div>
+
+      {checkedCount === PACKING_ITEMS.length && LUCKY_WORDS[person] && (
+        <div className="flex items-center gap-4 rounded-2xl border border-accent/40 bg-accent-soft p-4">
+          <span className="text-2xl leading-none text-accent">{LUCKY_WORDS[person].kanji}</span>
+          <div className="flex flex-col">
+            <span className="text-sm font-semibold text-text">{t("packing.luckyWord.title")}</span>
+            <span className="text-xs text-muted">{t("packing.luckyWord.subtitle")}</span>
+            <span className="text-sm text-accent">
+              {LUCKY_WORDS[person].romaji} · {t(`packing.luckyWordMeanings.${person}`)}
+            </span>
+          </div>
+        </div>
+      )}
 
       {byCategory.map(({ category, items }) => (
         <section key={category} className="flex flex-col gap-2">
