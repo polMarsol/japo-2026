@@ -39,6 +39,27 @@ function walk(nodes: DayNode[], day: string | null, out: MapLocation[]) {
   }
 }
 
+// Cerca de Google Maps centrada al lloc (amb coordenades) o pel seu nom
+// (fallback quan no en tenim coordenades conegudes) — útil per a "lavabo/
+// conveni més proper" sense mantenir cap base de dades pròpia de POIs.
+export function nearbySearchUrl(loc: MapLocation, query: string): string {
+  if (loc.coords) {
+    const [lat, lng] = loc.coords;
+    return `https://www.google.com/maps/search/${encodeURIComponent(query)}/@${lat},${lng},16z`;
+  }
+  return `https://www.google.com/maps/search/${encodeURIComponent(`${query} near ${loc.name}, Japan`)}`;
+}
+
+// Primera coordenada coneguda de cada dia (mateix criteri que "dayCoords" a
+// Mapes.tsx), com a punt d'ancoratge per demanar la previsió del temps.
+export function getDayAnchorCoords(db: Db): Record<string, [number, number]> {
+  const out: Record<string, [number, number]> = {};
+  for (const loc of getMapLocations(db)) {
+    if (loc.day && loc.coords && !out[loc.day]) out[loc.day] = loc.coords;
+  }
+  return out;
+}
+
 const cacheByLang = new Map<Db, MapLocation[]>();
 
 export function getMapLocations(db: Db): MapLocation[] {

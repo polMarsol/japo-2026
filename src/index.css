@@ -66,10 +66,18 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Iconos Material Symbols (SVG crudo importado con ?raw): heredan tamaño y color */
+/* Iconos Material Symbols (SVG crudo importado con ?raw): heredan tamaño y color.
+   El tamany per defecte va dins @layer base perquè les classes h-*/w-* de
+   Tailwind (a @layer utilities, amb prioritat més alta) sempre el puguin
+   sobreescriure — en Tailwind v4 el guanyador entre capes no depèn de
+   l'especificitat del selector, només de l'ordre de les capes. */
+@layer base {
+  .gicon {
+    width: 1em;
+    height: 1em;
+  }
+}
 .gicon {
-  width: 1em;
-  height: 1em;
   line-height: 0;
 }
 .gicon svg {

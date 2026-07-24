@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet"
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { useTranslation } from "react-i18next";
-import { getMapLocations } from "../lib/locations";
+import { getMapLocations, nearbySearchUrl, type MapLocation } from "../lib/locations";
 import { useLocalizedDb } from "../lib/db";
 import { getDayRouteLegs, formatDistance, formatDuration, type RouteMode } from "../lib/routes";
 import { tilesForCoords, downloadTiles } from "../lib/offlineTiles";
@@ -11,6 +11,34 @@ import { Icon } from "../components/Icon";
 
 const DOWNLOADED_KEY = "japo2026:mapsDownloaded";
 const ROUTE_COLOR: Record<RouteMode, string> = { foot: "#2563eb", car: "#f97316" };
+
+const TOILET_TIP_IDS = ["conbini", "station", "department", "temple", "tissue"];
+const TRASH_TIP_IDS = ["whyFewBins", "conbiniBin", "vending", "bag"];
+
+function NearbyChips({ loc, t }: { loc: MapLocation; t: (key: string) => string }) {
+  return (
+    <>
+      <a
+        href={nearbySearchUrl(loc, "public toilet")}
+        target="_blank"
+        rel="noreferrer"
+        className="flex shrink-0 items-center gap-1 rounded-full bg-chip px-2.5 py-1 text-xs text-chip-text active:opacity-80"
+      >
+        <Icon name="wc" className="h-3.5 w-3.5" />
+        {t("maps.nearby.toiletButton")}
+      </a>
+      <a
+        href={nearbySearchUrl(loc, "convenience store")}
+        target="_blank"
+        rel="noreferrer"
+        className="flex shrink-0 items-center gap-1 rounded-full bg-chip px-2.5 py-1 text-xs text-chip-text active:opacity-80"
+      >
+        <Icon name="local_convenience_store" className="h-3.5 w-3.5" />
+        {t("maps.nearby.storeButton")}
+      </a>
+    </>
+  );
+}
 
 const pinIcon = new L.DivIcon({
   className: "",
@@ -159,6 +187,9 @@ export function Mapes() {
                 <a href={loc.link} target="_blank" rel="noreferrer">
                   {t("maps.openInMaps")}
                 </a>
+                <div className="mt-1.5 flex gap-1.5">
+                  <NearbyChips loc={loc} t={t} />
+                </div>
               </Popup>
             </Marker>
           ))}
@@ -266,28 +297,61 @@ export function Mapes() {
             </summary>
             <ul className="mt-2 flex flex-col gap-2">
               {items.map((loc, i) => (
-                <li
-                  key={i}
-                  className="flex items-center justify-between gap-2 text-sm text-text"
-                >
+                <li key={i} className="flex flex-col gap-1.5 text-sm text-text">
                   <span className="flex items-center gap-1.5">
                     {loc.coords && <span className="text-accent">●</span>}
                     {loc.name}
                   </span>
-                  <a
-                    href={loc.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex shrink-0 items-center gap-1 rounded-full bg-chip px-2.5 py-1 text-xs text-chip-text active:opacity-80"
-                  >
-                    <Icon name="location_on" className="h-3.5 w-3.5" />
-                    {t("maps.openInMaps")}
-                  </a>
+                  <div className="flex flex-wrap gap-1.5">
+                    <a
+                      href={loc.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex shrink-0 items-center gap-1 rounded-full bg-chip px-2.5 py-1 text-xs text-chip-text active:opacity-80"
+                    >
+                      <Icon name="location_on" className="h-3.5 w-3.5" />
+                      {t("maps.openInMaps")}
+                    </a>
+                    <NearbyChips loc={loc} t={t} />
+                  </div>
                 </li>
               ))}
             </ul>
           </details>
         ))}
+      </section>
+
+      <section className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-3">
+        <h2 className="flex items-center gap-1.5 text-sm font-semibold text-accent">
+          <Icon name="wc" className="h-[18px] w-[18px]" />
+          {t("maps.nearby.sectionTitle")}
+        </h2>
+        <div className="flex flex-col gap-1.5">
+          <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
+            {t("maps.nearby.toiletsTitle")}
+          </h3>
+          <ul className="flex flex-col gap-1">
+            {TOILET_TIP_IDS.map((id) => (
+              <li key={id} className="flex items-start gap-1.5 text-sm leading-relaxed text-text/85">
+                <Icon name="wc" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
+                {t(`maps.nearby.toiletTips.${id}`)}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex flex-col gap-1.5">
+          <h3 className="text-xs font-semibold uppercase tracking-wide text-muted">
+            {t("maps.nearby.trashTitle")}
+          </h3>
+          <ul className="flex flex-col gap-1">
+            {TRASH_TIP_IDS.map((id) => (
+              <li key={id} className="flex items-start gap-1.5 text-sm leading-relaxed text-text/85">
+                <Icon name="delete_sweep" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
+                {t(`maps.nearby.trashTips.${id}`)}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </div>
   );

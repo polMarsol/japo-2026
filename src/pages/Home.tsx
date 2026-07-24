@@ -12,6 +12,8 @@ import { SUPPORTED_LANGUAGES } from "../i18n/resources";
 import { PACKING_ITEMS } from "../lib/packingItems";
 import { TRAVELERS } from "../lib/travelers";
 import { usePackingChecks } from "../lib/packingSync";
+import { pickGlanceDay, useDailyForecast, weatherCodeToIcon } from "../lib/weather";
+import { useTripPhotos } from "../lib/tripPhotosSync";
 
 const LANGUAGE_LABELS: Record<string, string> = { ca: "CA", en: "EN", es: "ES", ja: "JA" };
 
@@ -64,6 +66,21 @@ function NavTile({
   );
 }
 
+/** Fons decoratiu per a tiles sense foto: degradat opac (no depèn del fons
+ * de la targeta) + icona gran de marca d'aigua, perquè cap secció quedi amb
+ * una targeta plana i buida. Colors sòlids (no accent-soft/opacitat) perquè
+ * es vegi igual de bé amb tema clar i fosc: en tema clar, un degradat
+ * translúcid es rentava contra el fons blanc i el text blanc quedava
+ * il·legible. */
+function TileDecor({ icon }: { icon: IconName }) {
+  return (
+    <>
+      <div className="absolute inset-0 bg-gradient-to-br from-accent to-[#3b0a0a]" />
+      <Icon name={icon} className="absolute -right-2 -top-2 h-20 w-20 text-white/25" />
+    </>
+  );
+}
+
 export function Home() {
   const { t, i18n } = useTranslation();
   const db = useLocalizedDb(i18n.language);
@@ -81,6 +98,16 @@ export function Home() {
     return { person: p, checked, progress: PACKING_ITEMS.length ? checked / PACKING_ITEMS.length : 0 };
   });
   const packingCompleteCount = packingByPerson.filter((p) => p.checked === PACKING_ITEMS.length).length;
+
+  const { dayAnchors, getDayForecast } = useDailyForecast(db);
+  const glanceEntry = pickGlanceDay(trip, dayAnchors);
+  const glanceDaily = glanceEntry ? getDayForecast(String(glanceEntry.day)) : null;
+  const glanceForecast = glanceDaily?.find((d) => d.date === glanceEntry?.date) ?? null;
+
+  const { list: albumPhotos } = useTripPhotos();
+  const recentPhotos = albumPhotos.slice(0, 4);
+
+  const weatherIcon = glanceForecast ? weatherCodeToIcon(glanceForecast.weatherCode) : "wb_sunny";
 
   return (
     <div className="flex flex-col gap-6 p-4 pb-8">
@@ -124,14 +151,16 @@ export function Home() {
           label={t("nav.days")}
           sublabel={t("days.progress", { done: count, total: totalDays })}
           photo={heroPhoto ? photoUrl(heroPhoto) : undefined}
+          visual={!heroPhoto ? <TileDecor icon="calendar_month" /> : undefined}
         />
         <NavTile
           to="/reserves"
           icon="hotel"
           label={t("nav.reservations")}
           sublabel={`${db.reservations.items.length}`}
+          visual={<TileDecor icon="hotel" />}
         />
-        <NavTile to="/mapes" icon="map" label={t("nav.maps")} sublabel="OSM" />
+        <NavTile to="/mapes" icon="map" label={t("nav.maps")} sublabel="OSM" visual={<TileDecor icon="map" />} />
         <NavTile
           to="/equipatge"
           icon="checklist"
@@ -139,7 +168,7 @@ export function Home() {
           sublabel={t("packing.travelersComplete", { done: packingCompleteCount, total: TRAVELERS.length })}
           visual={
             <>
-              <div className="absolute inset-0 bg-accent-soft" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent to-[#3b0a0a]" />
               <div className="absolute inset-0 flex flex-wrap content-center items-center justify-center gap-1.5 p-3 pb-9">
                 {packingByPerson.map(({ person, progress, checked }) => {
                   const complete = checked === PACKING_ITEMS.length;
@@ -160,6 +189,56 @@ export function Home() {
               </div>
             </>
           }
+        />
+        <NavTile
+          to="/clima"
+          icon={weatherIcon}
+          label={t("nav.weather")}
+          sublabel={
+            glanceForecast?.tempMax != null
+              ? `${Math.round(glanceForecast.tempMax)}° / ${Math.round(glanceForecast.tempMin ?? 0)}°`
+              : t("weather.title")
+          }
+          visual={<TileDecor icon={weatherIcon} />}
+        />
+        <NavTile
+          to="/etiqueta"
+          icon="temple_buddhist"
+          label={t("nav.etiquette")}
+          sublabel={t("etiquette.subtitleShort")}
+          visual={<TileDecor icon="temple_buddhist" />}
+        />
+        <NavTile
+          to="/album"
+          icon="photo_library"
+          label={t("nav.album")}
+          sublabel={
+            albumPhotos.length > 0
+              ? t("album.photoCount", { count: albumPhotos.length })
+              : t("album.subtitleShort")
+          }
+          visual={
+            recentPhotos.length > 0 ? (
+              <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0.5">
+                {[0, 1, 2, 3].map((i) => (
+                  <div key={i} className="overflow-hidden bg-chip">
+                    {recentPhotos[i] && (
+                      <img src={recentPhotos[i].url} alt="" className="h-full w-full object-cover" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <TileDecor icon="photo_library" />
+            )
+          }
+        />
+        <NavTile
+          to="/traductor"
+          icon="sos"
+          label={t("nav.translator")}
+          sublabel={t("translator.subtitleShort")}
+          visual={<TileDecor icon="sos" />}
         />
       </div>
 

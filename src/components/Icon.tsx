@@ -62,6 +62,38 @@ import iconHandshake from "@material-symbols/svg-400/outlined/handshake.svg?raw"
 import iconPhotoCamera from "@material-symbols/svg-400/outlined/photo_camera.svg?raw";
 import iconDownload from "@material-symbols/svg-400/outlined/download.svg?raw";
 import iconBalance from "@material-symbols/svg-400/outlined/balance.svg?raw";
+import iconSos from "@material-symbols/svg-400/outlined/sos.svg?raw";
+import iconLocalHospital from "@material-symbols/svg-400/outlined/local_hospital.svg?raw";
+import iconLocalPolice from "@material-symbols/svg-400/outlined/local_police.svg?raw";
+import iconVolumeUp from "@material-symbols/svg-400/outlined/volume_up.svg?raw";
+import iconSearch from "@material-symbols/svg-400/outlined/search.svg?raw";
+import iconWc from "@material-symbols/svg-400/outlined/wc.svg?raw";
+import iconLocalConvenienceStore from "@material-symbols/svg-400/outlined/local_convenience_store.svg?raw";
+import iconDeleteSweep from "@material-symbols/svg-400/outlined/delete_sweep.svg?raw";
+import iconWbSunny from "@material-symbols/svg-400/outlined/wb_sunny.svg?raw";
+import iconPartlyCloudyDay from "@material-symbols/svg-400/outlined/partly_cloudy_day.svg?raw";
+import iconCloud from "@material-symbols/svg-400/outlined/cloud.svg?raw";
+import iconFoggy from "@material-symbols/svg-400/outlined/foggy.svg?raw";
+import iconRainyLight from "@material-symbols/svg-400/outlined/rainy_light.svg?raw";
+import iconRainy from "@material-symbols/svg-400/outlined/rainy.svg?raw";
+import iconRainyHeavy from "@material-symbols/svg-400/outlined/rainy_heavy.svg?raw";
+import iconThunderstorm from "@material-symbols/svg-400/outlined/thunderstorm.svg?raw";
+import iconWeatherSnowy from "@material-symbols/svg-400/outlined/weather_snowy.svg?raw";
+import iconUmbrella from "@material-symbols/svg-400/outlined/umbrella.svg?raw";
+import iconWaterDrop from "@material-symbols/svg-400/outlined/water_drop.svg?raw";
+import iconThermostat from "@material-symbols/svg-400/outlined/thermostat.svg?raw";
+import iconWindPower from "@material-symbols/svg-400/outlined/wind_power.svg?raw";
+import iconVisibility from "@material-symbols/svg-400/outlined/visibility.svg?raw";
+import iconTempleBuddhist from "@material-symbols/svg-400/outlined/temple_buddhist.svg?raw";
+import iconSwipe from "@material-symbols/svg-400/outlined/swipe.svg?raw";
+import iconPhotoLibrary from "@material-symbols/svg-400/outlined/photo_library.svg?raw";
+import iconZoomIn from "@material-symbols/svg-400/outlined/zoom_in.svg?raw";
+import iconCall from "@material-symbols/svg-400/outlined/call.svg?raw";
+import iconMail from "@material-symbols/svg-400/outlined/mail.svg?raw";
+import iconTrain from "@material-symbols/svg-400/outlined/train.svg?raw";
+import iconOnsen from "@material-symbols/svg-400/outlined/onsen.svg?raw";
+import iconFootprint from "@material-symbols/svg-400/outlined/footprint.svg?raw";
+import iconWbTwilight from "@material-symbols/svg-400/outlined/wb_twilight.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -125,6 +157,38 @@ const ICONS = {
   photo_camera: iconPhotoCamera,
   download: iconDownload,
   balance: iconBalance,
+  sos: iconSos,
+  local_hospital: iconLocalHospital,
+  local_police: iconLocalPolice,
+  volume_up: iconVolumeUp,
+  search: iconSearch,
+  wc: iconWc,
+  local_convenience_store: iconLocalConvenienceStore,
+  delete_sweep: iconDeleteSweep,
+  wb_sunny: iconWbSunny,
+  partly_cloudy_day: iconPartlyCloudyDay,
+  cloud: iconCloud,
+  foggy: iconFoggy,
+  rainy_light: iconRainyLight,
+  rainy: iconRainy,
+  rainy_heavy: iconRainyHeavy,
+  thunderstorm: iconThunderstorm,
+  weather_snowy: iconWeatherSnowy,
+  umbrella: iconUmbrella,
+  water_drop: iconWaterDrop,
+  thermostat: iconThermostat,
+  wind_power: iconWindPower,
+  visibility: iconVisibility,
+  temple_buddhist: iconTempleBuddhist,
+  swipe: iconSwipe,
+  photo_library: iconPhotoLibrary,
+  zoom_in: iconZoomIn,
+  call: iconCall,
+  mail: iconMail,
+  train: iconTrain,
+  onsen: iconOnsen,
+  footprint: iconFootprint,
+  wb_twilight: iconWbTwilight,
 } as const;
 
 export type IconName = keyof typeof ICONS;
