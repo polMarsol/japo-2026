@@ -159,11 +159,25 @@ def status_key(status: str | None) -> str:
 
 
 # El repo es publico: no exponemos emails personales de los acompanantes.
-# Se sustituyen por el mismo nombre que ya aparece en otras filas.
-EMAIL_TO_NAME = {
-    "apareja4@xtec.cat": "Amaya Pareja de los Santos",
-    "sfern121@xtec.cat": "Susana Fernandez",
-}
+# Se sustituyen por el mismo nombre que ya aparece en otras filas. El mapeo
+# real vive en un fichero excluido explicitamente en .gitignore, para no
+# volver a subir emails/nombres reales al repo publico.
+_REDACT_MAP_PATH = Path(__file__).resolve().parent / "redact_map.json"
+
+
+def _load_email_to_name() -> dict[str, str]:
+    if not _REDACT_MAP_PATH.exists():
+        print(
+            f"Aviso: no existe {_REDACT_MAP_PATH.name} - no se redactara ningun "
+            "email de 'responsable'. Crea ese fichero (json {\"email\": \"Nombre\"}) "
+            "si el Excel de origen tiene emails personales en esa columna."
+        )
+        return {}
+    with open(_REDACT_MAP_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+EMAIL_TO_NAME = _load_email_to_name()
 
 
 def redact_responsible(value: str | None) -> str | None:

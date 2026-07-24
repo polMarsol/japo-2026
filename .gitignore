@@ -11,4 +11,8 @@ Users*AppDataLocalTemp*
 *.xlsx
 *.xlsx - *.csv
 
+# Mapeo email->nombre para redactar responsables al regenerar db.json (datos
+# personales reales, nunca al repo publico)
+scripts/redact_map.json
+
 manual/
