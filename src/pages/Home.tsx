@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useLocalizedDb } from "../lib/db";
@@ -16,6 +16,7 @@ import { pickGlanceDay, useDailyForecast, weatherCodeToIcon } from "../lib/weath
 import { useTripPhotos } from "../lib/tripPhotosSync";
 
 const LANGUAGE_LABELS: Record<string, string> = { ca: "CA", en: "EN", es: "ES", ja: "JA" };
+const GOOGLE_DRIVE_URL = "https://drive.google.com/drive/folders/1SpetvZQUJlj3Zdr0TAmTmcd-KcgLlXr2?usp=drive_link";
 
 function NavTile({
   to,
@@ -24,6 +25,7 @@ function NavTile({
   sublabel,
   photo,
   visual,
+  visualIsPhoto,
 }: {
   to: string;
   icon: IconName;
@@ -31,8 +33,13 @@ function NavTile({
   sublabel: string;
   photo?: string;
   visual?: ReactNode;
+  /** El visual és una foto real (p.ex. la graella de l'àlbum), no un patró
+   * controlat com TileDecor: necessita el vel fosc + text blanc perquè el
+   * contrast no depèn del contingut imprevisible de la foto. */
+  visualIsPhoto?: boolean;
 }) {
-  const filled = Boolean(photo) || Boolean(visual);
+  const isPhotoLike = Boolean(photo) || (Boolean(visual) && visualIsPhoto);
+  const hasVisual = Boolean(visual);
   return (
     <Link
       to={to}
@@ -46,38 +53,48 @@ function NavTile({
       ) : visual ? (
         <>
           {visual}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent" />
+          {visualIsPhoto && (
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+          )}
         </>
       ) : (
         <Icon name={icon} className="absolute right-3 top-3 h-6 w-6 text-accent" />
       )}
       <span
         className={`relative z-10 flex items-center gap-1.5 text-sm font-semibold ${
-          filled ? "text-white" : "text-text"
+          isPhotoLike ? "text-white" : "text-text"
         }`}
       >
-        {filled && <Icon name={icon} className="h-4 w-4" />}
+        {hasVisual && <Icon name={icon} className={`h-4 w-4 ${isPhotoLike ? "" : "text-accent"}`} />}
         {label}
       </span>
-      <span className={`relative z-10 text-xs ${filled ? "text-white/70" : "text-muted"}`}>
+      <span className={`relative z-10 text-xs ${isPhotoLike ? "text-white/70" : "text-muted"}`}>
         {sublabel}
       </span>
     </Link>
   );
 }
 
-/** Fons decoratiu per a tiles sense foto: degradat opac (no depèn del fons
- * de la targeta) + icona gran de marca d'aigua, perquè cap secció quedi amb
- * una targeta plana i buida. Colors sòlids (no accent-soft/opacitat) perquè
- * es vegi igual de bé amb tema clar i fosc: en tema clar, un degradat
- * translúcid es rentava contra el fons blanc i el text blanc quedava
- * il·legible. */
+/** Fons decoratiu per a tiles sense foto: degradat suau (gris/vermell fluix,
+ * evocant la bandera de Japó) + icona gran de marca d'aigua, perquè cap
+ * secció quedi amb una targeta plana i buida. Fet amb les mateixes variables
+ * de color que la resta de l'app (accent-soft, chip) perquè s'adapti sol al
+ * tema clar/fosc, igual que qualsevol altra targeta de bg-surface. */
 function TileDecor({ icon }: { icon: IconName }) {
   return (
     <>
-      <div className="absolute inset-0 bg-gradient-to-br from-accent to-[#3b0a0a]" />
-      <Icon name={icon} className="absolute -right-2 -top-2 h-20 w-20 text-white/25" />
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-soft to-chip" />
+      <Icon name={icon} className="absolute -right-3 -top-3 h-20 w-20 text-accent/25" />
     </>
+  );
+}
+
+function CountdownUnit({ value, label }: { value: number; label: string }) {
+  return (
+    <div className="flex flex-col items-center gap-0.5 rounded-xl bg-chip py-2">
+      <span className="text-lg font-bold tabular-nums text-text">{String(value).padStart(2, "0")}</span>
+      <span className="text-[10px] uppercase tracking-wide text-muted">{label}</span>
+    </div>
   );
 }
 
@@ -108,6 +125,33 @@ export function Home() {
   const recentPhotos = albumPhotos.slice(0, 4);
 
   const weatherIcon = glanceForecast ? weatherCodeToIcon(glanceForecast.weatherCode) : "wb_sunny";
+
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const firstDate = trip[0]?.date ?? null;
+  const lastDate = trip[trip.length - 1]?.date ?? null;
+  const firstDateTime = firstDate ? new Date(`${firstDate}T00:00:00Z`).getTime() : null;
+
+  const [now, setNow] = useState(() => Date.now());
+  const isCountingDown = firstDateTime !== null && firstDateTime > now;
+
+  useEffect(() => {
+    if (!isCountingDown) return;
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, [isCountingDown]);
+
+  const msRemaining = isCountingDown ? firstDateTime! - now : 0;
+  const remDays = Math.floor(msRemaining / 86_400_000);
+  const remHours = Math.floor((msRemaining % 86_400_000) / 3_600_000);
+  const remMinutes = Math.floor((msRemaining % 3_600_000) / 60_000);
+  const remSeconds = Math.floor((msRemaining % 60_000) / 1000);
+
+  const tripFinished = lastDate ? new Date(todayStr).getTime() > new Date(lastDate).getTime() : false;
+  const todayEntry = trip.find((e) => e.date === todayStr);
+  const todayResum = todayEntry ? db.resum.find((r) => String(r.day) === String(todayEntry.day)) : undefined;
+  const todayForecastList = todayEntry ? getDayForecast(String(todayEntry.day)) : null;
+  const todayForecast = todayForecastList?.find((d) => d.date === todayEntry?.date) ?? null;
+  const todayWeatherIcon = todayForecast ? weatherCodeToIcon(todayForecast.weatherCode) : null;
 
   return (
     <div className="flex flex-col gap-6 p-4 pb-8">
@@ -144,6 +188,55 @@ export function Home() {
         </div>
       </header>
 
+      {isCountingDown ? (
+        <div className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-4">
+          <div className="flex items-center gap-2">
+            <Icon name="flight_takeoff" className="h-5 w-5 text-accent" />
+            <span className="text-sm font-semibold text-text">{t("home.countdown")}</span>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            <CountdownUnit value={remDays} label={t("home.units.days")} />
+            <CountdownUnit value={remHours} label={t("home.units.hours")} />
+            <CountdownUnit value={remMinutes} label={t("home.units.minutes")} />
+            <CountdownUnit value={remSeconds} label={t("home.units.seconds")} />
+          </div>
+        </div>
+      ) : todayEntry ? (
+        <Link
+          to={`/dies/${todayEntry.day}`}
+          className="flex flex-col gap-2.5 rounded-2xl border border-accent/30 bg-accent-soft p-4"
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-semibold uppercase tracking-wide text-accent">{t("home.today")}</span>
+            <span className="text-xs text-muted">
+              {t("days.day")} {todayEntry.day}
+            </span>
+          </div>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex min-w-0 flex-col">
+              <span className="truncate text-base font-semibold text-text">
+                {todayEntry.route ?? todayResum?.zone ?? `${t("days.day")} ${todayEntry.day}`}
+              </span>
+              {todayResum?.accommodation && (
+                <span className="truncate text-xs text-muted">{todayResum.accommodation}</span>
+              )}
+            </div>
+            {todayForecast && todayWeatherIcon && (
+              <div className="flex shrink-0 items-center gap-1.5">
+                <Icon name={todayWeatherIcon} className="h-6 w-6 text-accent" />
+                <span className="text-sm font-medium text-text">
+                  {Math.round(todayForecast.tempMax ?? 0)}° / {Math.round(todayForecast.tempMin ?? 0)}°
+                </span>
+              </div>
+            )}
+          </div>
+        </Link>
+      ) : tripFinished ? (
+        <div className="rounded-2xl border border-line bg-surface p-4 text-center text-sm text-muted">
+          {t("home.tripFinished")}
+        </div>
+      ) : null}
+
       <div className="grid grid-cols-2 gap-3">
         <NavTile
           to="/dies"
@@ -168,7 +261,7 @@ export function Home() {
           sublabel={t("packing.travelersComplete", { done: packingCompleteCount, total: TRAVELERS.length })}
           visual={
             <>
-              <div className="absolute inset-0 bg-gradient-to-br from-accent to-[#3b0a0a]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-soft to-chip" />
               <div className="absolute inset-0 flex flex-wrap content-center items-center justify-center gap-1.5 p-3 pb-9">
                 {packingByPerson.map(({ person, progress, checked }) => {
                   const complete = checked === PACKING_ITEMS.length;
@@ -178,7 +271,7 @@ export function Home() {
                         progress={progress}
                         className="h-full w-full"
                         fillClassName={complete ? "text-yellow-400" : "text-accent"}
-                        emptyClassName="text-white/25"
+                        emptyClassName="text-accent/30"
                       />
                       {complete && (
                         <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-yellow-400" />
@@ -232,6 +325,7 @@ export function Home() {
               <TileDecor icon="photo_library" />
             )
           }
+          visualIsPhoto={recentPhotos.length > 0}
         />
         <NavTile
           to="/traductor"
@@ -241,6 +335,24 @@ export function Home() {
           visual={<TileDecor icon="sos" />}
         />
       </div>
+
+      <a
+        href={GOOGLE_DRIVE_URL}
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center justify-between rounded-2xl border border-line bg-surface px-4 py-3.5 active:bg-chip"
+      >
+        <span className="flex items-center gap-3">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent">
+            <Icon name="folder" className="h-5 w-5" />
+          </span>
+          <span className="flex flex-col">
+            <span className="text-sm font-medium text-text">{t("home.drive.title")}</span>
+            <span className="text-xs text-muted">{t("home.drive.subtitle")}</span>
+          </span>
+        </span>
+        <Icon name="open_in_new" className="h-5 w-5 text-muted" />
+      </a>
 
       <div className="flex flex-col justify-between gap-2 rounded-2xl border border-line bg-surface p-3">
         <span className="text-sm font-semibold text-text">{t("language.label")}</span>

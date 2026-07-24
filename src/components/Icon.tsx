@@ -94,6 +94,7 @@ import iconTrain from "@material-symbols/svg-400/outlined/train.svg?raw";
 import iconOnsen from "@material-symbols/svg-400/outlined/onsen.svg?raw";
 import iconFootprint from "@material-symbols/svg-400/outlined/footprint.svg?raw";
 import iconWbTwilight from "@material-symbols/svg-400/outlined/wb_twilight.svg?raw";
+import iconFolder from "@material-symbols/svg-400/outlined/folder.svg?raw";
 
 const ICONS = {
   home: iconHome,
@@ -189,6 +190,7 @@ const ICONS = {
   onsen: iconOnsen,
   footprint: iconFootprint,
   wb_twilight: iconWbTwilight,
+  folder: iconFolder,
 } as const;
 
 export type IconName = keyof typeof ICONS;

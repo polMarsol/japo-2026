@@ -20,6 +20,7 @@ export const PACKING_ITEMS: PackingItem[] = [
   { id: "power-strip", category: "tech" },
   { id: "walking-shoes", category: "clothing" },
   { id: "water-shoes", category: "clothing" },
+  { id: "swimsuit", category: "clothing" },
   { id: "socks", category: "clothing" },
   { id: "pants", category: "clothing" },
   { id: "tshirts", category: "clothing" },
